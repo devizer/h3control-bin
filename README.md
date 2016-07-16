@@ -16,7 +16,9 @@ cd h3control
 ./h3control-console.sh --help
 sudo ./h3control-console.sh --nologo --binding=*:5000
 ```
+
 Step 2: Switch to your firefox|chrome|ie|opera|safary and check http://orange-pi-ip-address:5000 works fine
+
 Step 3: Return to your PI board and press Ctrl-C to stop consolas h3control. Install h3control daemon to start h3control during build
 ```
 ./h3control-install-daemon.sh
