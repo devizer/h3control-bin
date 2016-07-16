@@ -14,7 +14,7 @@ $SCRIPT/banner
 
 export BUILD_LABEL=public
 export BUILD_DATE=$(date +"%A, %B %d %Y %R %Z")
-export BUILT_VERSION="v:\<b\>$fullver\</b\>"
+export BUILT_VERSION="v:<b>$fullver</b>"
 $SCRIPT/banner/make-banner.sh ../public/status.png
 
 git tag v$fullver-public
