@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # mono --desktop ./bin/H3Control.exe "$@"
 command -v mono >/dev/null || ( echo mono NOT FOUND. Check `mono' executable is installed and present in the \$PATH ; exit 1 )
 command -v dirname >/dev/null || ( echo dirname NOT FOUND. Check `dirname' executable is present in the \$PATH ; exit 1 )
