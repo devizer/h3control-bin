@@ -1,8 +1,7 @@
 # h3control-bin
 h3control is a console/daemon for H3 based PI board. It displays temperature, frequency and usage via built-in http server. It allows to control min/max cpu and ddr frequency. This repository holds installers of h3control only
 
-Build Status: ![status of public distribution](https://github.com/devizer/h3control-bin/blob/master/public/status.png "status of public distribution")
-<img src='https://github.com/devizer/h3control-bin/blob/master/public/status.png?raw=true' width='290' height='54' style='float: right' alt='status of public installer' alt='status of public installer'></img><img src='https://github.com/devizer/h3control-bin/blob/master/staging/status.png?raw=true' width='290' height='54' style='float: right' alt='status of staging installer' alt='status of staging installer'></img>
+Build Status: <img src='https://github.com/devizer/h3control-bin/blob/master/public/status.png?raw=true' width='290' height='54' style='float: right' alt='status of public installer' alt='status of public installer'></img><img src='https://github.com/devizer/h3control-bin/blob/master/staging/status.png?raw=true' width='290' height='54' style='float: right' alt='status of staging installer' alt='status of staging installer'></img>
 
 ## prerequisite
 The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono (version 3.2), which supports ARM hard float arch, exposes .NET 4.5 runtime.
