@@ -16,3 +16,6 @@ envsubst < $SCRIPTPATH/banner-template.html > $htmlfile
 
 sudo xvfb-run --server-args="-screen 0, 435x68x24" $SCRIPTPATH/webkit2png.py -o "$pngtemp" file:///$htmlfile
 cp "$pngtemp" "$outpng"
+
+rm -f $htmlfile
+rm -f $pngtemp
