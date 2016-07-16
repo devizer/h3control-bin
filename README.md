@@ -5,10 +5,10 @@ h3control is a console/daemon for H3 based PI board. It displays temperature, fr
 The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono, which supports ARM hard float arch, has .NET 4.5 runtime.
 
 ## installation
-1. run h3control-console.sh
+Step 1: run h3control-console.sh
 ```
 cd /tmp
-wget -O h3control.tar.gz --no-check-certificate 'https://github.com/devizer/h3control-bin/blob/master/public/h3control.tar.gz?raw=true'
+wget -O h3control.tar.gz --no-check-certificate https://github.com/devizer/h3control-bin/raw/master/public/h3control.tar.gz
 killall -q -12 mono || echo "stop of h3control is skipped"
 rm -rf h3control
 tar xzf h3control.tar.gz
@@ -16,8 +16,8 @@ cd h3control
 ./h3control-console.sh --help
 sudo ./h3control-console.sh --nologo --binding=*:5000
 ```
-3. Switch to your firefox|chrome|ie|opera|safary and check http://orange-pi-ip-address:5000 works fine
-4. Return to your PI board and press Ctrl-C to stop consolas h3control. Install h3control daemon to start h3control during build
+Step 2: Switch to your firefox|chrome|ie|opera|safary and check http://orange-pi-ip-address:5000 works fine
+Step 3: Return to your PI board and press Ctrl-C to stop consolas h3control. Install h3control daemon to start h3control during build
 ```
 ./h3control-install-daemon.sh
 ```
