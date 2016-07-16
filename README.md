@@ -25,7 +25,7 @@ h3control/h3control-install-daemon.sh
 
 ## install/update h3control daemon using `h3control-install-daemon.sh`
 ```bash
-wget -q -O - https://github.com/devizer/h3control-bin/blob/master/build/target/h3control-install-daemon.sh | bash
+wget -q -O - https://github.com/devizer/h3control-bin/raw/master/build/target/h3control-install-daemon.sh | bash
 ```
 
 ### Screenshot: h3control just works
