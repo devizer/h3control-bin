@@ -2,7 +2,7 @@
 h3control is a console/daemon for H3 based PI board. It displays temperature, frequency and usage via built-in http server. It allows to control min/max cpu and ddr frequency. This repository holds installers of h3control only
 
 ## prerequisite
-The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono, which supports ARM hard float arch, exposes .NET 4.5 runtime.
+The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono (version 3.2), which supports ARM hard float arch, exposes .NET 4.5 runtime.
 
 ## installation
 Step 1: run h3control-console.sh
