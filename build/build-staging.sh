@@ -2,7 +2,7 @@
 pushd `dirname $0` > /dev/null
 SCRIPT=`pwd`
 popd > /dev/null
-echo build directory is $build
+echo build directory is $SCRIPT
 
 ver=$(cat ver)
 build=$(cat build)
