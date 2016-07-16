@@ -60,5 +60,8 @@ export BUILD_DATE=$(date +"%A, %B %d %Y %R %Z")
 export BUILT_VERSION="v:<b>$ver.$build</b>"
 $SCRIPT/banner/make-banner.sh ../staging/status.png
 
+git commit -am "Staging update: v$ver.$build, staging updates aren't recommended for upgrade"
+git push
+
 git tag v$ver.$build-staging
 git push --tags
