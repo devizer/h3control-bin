@@ -1,0 +1,4 @@
+~/_git/ - clone of h3control-bin.git
+  ---> build/build-staging.sh - build staging into h3control-bin.git/staging/, tag is v$ver.$build-staging
+  ---> build/publish-public.sh - copy ../staging to ../public, tag is v$ver.$build-public
+
