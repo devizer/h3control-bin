@@ -35,7 +35,13 @@ echo $ver.$build > $target/VERSION
 cd $target/bin
 chmod -R 644 .
 find . -type d -exec chmod 755 {} \;
-cd $target/..
 
+cd $target/..
 tar cf - h3control/ | pv | gzip -9 > h3control.tar.gz
 
+cp $target/../h3control.tar.gz $SCRIPT/../staging/h3control.tar.gz
+echo $ver.$build >  $SCRIPT/../staging/VERSION
+
+
+dt=`date +%s`
+echo "{ version: '$ver.$build', date: $dt }" > $SCRIPT/../staging/h3control-version.json
