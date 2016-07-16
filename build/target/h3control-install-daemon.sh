@@ -45,10 +45,10 @@ case "\$1" in
   start)
     echo "Starting h3control"
     # run application you want to start
-    mono --desktop $deploydir/bin/H3Control.exe 1>/dev/null 2>/dev/null &
+    mono --desktop "$deploydir/bin/H3Control.exe" 1>/dev/null 2>/dev/null &
     ;;
   version)
-    echo h3control daemon version is \`mono $deploydir/bin/H3Control.exe --version\` || echo h3control daemon is unavailable. please reinstall.
+    echo h3control daemon version is \`mono "$deploydir/bin/H3Control.exe" --version\` || echo h3control daemon is unavailable. please reinstall.
     ;;
   stop)
     echo "Stopping h3control"
