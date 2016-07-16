@@ -28,6 +28,7 @@ h3control/h3control-install-daemon.sh
 wget -q -O - https://github.com/devizer/h3control-bin/raw/master/build/target/h3control-install-daemon.sh | bash
 ```
 
+<a name="anchor"></a>
 ### Screenshot: h3control just works
 ![h3control in normal](https://github.com/devizer/h3control-bin/raw/master/images/h3control_v1.21_normal.jpg "h3control in normal")
 
