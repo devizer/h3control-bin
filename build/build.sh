@@ -21,7 +21,7 @@ cd H3Control/bin/Release
 cp -R . $target/bin
 
 cd $build/target
-cp . $target
+cp -R . $target
 
 cd $target/bin
 chmod -R 644 .
