@@ -29,7 +29,7 @@ time ( xbuild H3Control.sln /t:Rebuild /p:Configuration=Release /verbosity:norma
 
 
 cp -R $src/h3control/H3Control/bin/Release/* $target/bin
-for f in jqx-all.js jqxscheduler.js jqxgrid.js jqxscheduler.api.js jqxdatetimeinput.js jqxdatatable.js jqxchart.core.js jqxchart.js; do
+for f in jqx-all.js jqxscheduler.js jqxgrid.js jqxscheduler.api.js jqxdatetimeinput.js jqxdatatable.js ; do
   rm $target/bin/web/jqwidgets/$f
 done
 
