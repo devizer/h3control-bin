@@ -55,5 +55,5 @@ git pull
 git commit -am "Staging update: v$ver.$build"
 git push
 
-git tag v$ver.$build
+git tag v$ver.$build-staging
 git push --tags
