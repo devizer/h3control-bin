@@ -1,11 +1,11 @@
 
 UPDATE 22
-- Fixed launchers (h3control-console.sh & h3control-install-daemons.sh)
+- Fixed launchers (`h3control-console.sh` & `h3control-install-daemons.sh`)
 - Building moved to github
 
 
 UPDATE 21
-- Improoved response of frequency comtrol - gauges are updated immediately in response to click|tap on frequency. Intervals of refresh extended to 10 sec.
+- Improoved responsiblity of frequency control - gauges are updated immediately in response to click|tap on frequency. Intervals of refresh extended to `10s`.
 - Dashboard is redesigned. All the widgets of dashboard fit on a tablet 1024x768 or above.
 - Dashboard in disabled state (when orange pi is down) is also redesigned.
 - Added swap utilization column to the list of the top memory usage list
@@ -19,12 +19,12 @@ UPDATE 19 (1.19.386)
 
 
 UPDATE 18 (1.18.310)
-- In ./h3control-install-daemon.sh script fixed support of Fedora and OpenSUSE.
+- Fixed support of Fedora and OpenSUSE in `./h3control-install-daemon.sh` script.
 - Added info about mono and OS into logs.
 
 
 UPDATE 17
-- Added logging: log are writing into /var/tmp/h3control.logs/, /var/log/h3control.logs/ or /tmp/h3control.logs depending on permissions to that folder. h3control automatically trims own old logs.
+- Added logging: log are writing into /tmp/h3control.logs/, /var/log/h3control.logs/ or /var/tmp/h3control.logs depending on permissions to that folder. h3control automatically trims own old logs.
 - Added optional password protection of changing frequency. Screenshot: h3control_v1.17_readonly_mode.  How Dow do we do it? First, encrypt password:
 ````
     > ./h3control-console.sh -g=mySecret
@@ -35,7 +35,6 @@ Note, space before command above causes shell to eliminate the command from the 
 ````
     > ./h3control-console.sh -p=7D018BB3DF0E523692845AF1F27E992CE8A41650 -b=*:5000
 ````
-
 Without -p option behavior is the same as prev version - anybody from white-list, or anybody, could change frequency of an Orange PI
 
 
