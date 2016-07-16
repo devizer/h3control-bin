@@ -27,7 +27,11 @@ cp -R $packages .
 rm -rf H3Control/{bin,obj}
 time ( xbuild H3Control.sln /t:Rebuild /p:Configuration=Release /verbosity:normal )
 
+
 cp -R $src/h3control/H3Control/bin/Release/* $target/bin
+for f in jqx-all.js jqxscheduler.js jqxgrid.js jqxscheduler.api.js jqxdatetimeinput.js jqxdatatable.js jqxchart.core.js jqxchart.js; do
+  rm $target/bin/web/jqwidgets/$f
+done
 
 cp -R $SCRIPT/target/* $target
 echo $ver.$build > $target/VERSION
