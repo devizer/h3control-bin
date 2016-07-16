@@ -1,8 +1,9 @@
 #!/bin/bash
+build=`dirname $0`
 umount /m/v || true
 mount -a || true
 src=~/.build/h3control-tmp/source
-target=~/.build/h3control-tmp/target
+target=~/.build/h3control-tmp/target/h3control
 rm -rf `dirname $src`
 mkdir -p $src
 mkdir -p $target/bin
@@ -18,4 +19,14 @@ time ( xbuild H3Control.sln /t:Rebuild /p:Configuration=Release /verbosity:norma
 
 cd H3Control/bin/Release
 cp -R . $target/bin
-cd ..
+
+cd $build/target
+cp . $target
+
+cd $target/bin
+chmod -R 644 .
+find . -type d -exec chmod 755 {} \;
+cd $target/..
+
+tar cf - h3control/ | pv | gzip -9 > h3control.tar.gz
+
