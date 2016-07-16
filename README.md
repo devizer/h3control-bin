@@ -40,3 +40,5 @@ wget -q -O - https://github.com/devizer/h3control-bin/raw/master/build/target/h3
 ### Screenshot: h3control is offline
 ![h3control is offline](https://github.com/devizer/h3control-bin/raw/master/images/h3control_v1.21_offline.jpg "h3control is offline")
 
+### Screenshot: first version 0.1, not available now
+<center><img src='https://github.com/devizer/h3control-bin/raw/master/images/h3control-first.jpg' alt='h3control first build' border='0'></img></center>
