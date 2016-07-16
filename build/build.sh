@@ -1,6 +1,6 @@
 #!/bin/bash
 pushd `dirname $0` > /dev/null
-build=`pwd`
+SCRIPT=`pwd`
 popd > /dev/null
 echo build directory is $build
 
@@ -28,10 +28,10 @@ rm -rf H3Control/{bin,obj}
 time ( xbuild H3Control.sln /t:Rebuild /p:Configuration=Release /verbosity:normal )
 
 cd H3Control/bin/Release
-cp -r $src/h3control/H3Control/bin/Release/ $target/bin
+cp -r $src/h3control/H3Control/bin/Release $target/bin
 
-cd $build/target
-cp -r $build/target/ $target
+cd $SCRIPT/target
+cp -r $SCRIPT/target $target
 echo $ver.$build > $target/VERSION
 
 cd $target/bin
