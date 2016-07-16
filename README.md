@@ -1,4 +1,4 @@
-# h3control-bin <img src='https://github.com/devizer/h3control-bin/blob/master/public/status.png?raw=true' width='290' height='54' style='float: right' alt='status of public installer' alt='status of public installer'></img><img src='https://github.com/devizer/h3control-bin/blob/master/staging/status.png?raw=true' width='290' height='54' style='float: right' alt='status of staging installer' alt='status of staging installer'></img>
+# h3control-bin <div style='float: right'><img src='https://github.com/devizer/h3control-bin/blob/master/public/status.png?raw=true' width='290' height='54' style='float: right' alt='status of public installer' title='status of public installer'></img><img src='https://github.com/devizer/h3control-bin/blob/master/staging/status.png?raw=true' width='290' height='54' style='float: right' alt='status of staging installer' title='status of staging installer'></img></div>
 h3control is a console/daemon for H3 based PI board. It displays temperature, frequency and usage via built-in http server. It allows to control min/max cpu and ddr frequency. This repository holds installers of h3control only
 
 ## prerequisite
