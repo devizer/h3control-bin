@@ -1,0 +1,9 @@
+Im looking for feedback on testing h3control on different devices, on different linux distributions
+if your have a problem, please attach to your description a logs
+Logs can be easily packed into ~/h3-logs.tar.gz using this shell command:
+
+GZIP=-9 find /tmp/h3control.logs | sort -r | head -9 | tar czf ~/h3-logs.tar.gz -T -
+
+or 
+
+tar czf ~/h3-logs.tar.gz /tmp/h3control.logs/
