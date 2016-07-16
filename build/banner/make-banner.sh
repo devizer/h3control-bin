@@ -14,7 +14,7 @@ htmlfile=$(tempfile -pBA_ -s.html)
 pngtemp=$(tempfile -pBA_ -s.png)
 envsubst < $SCRIPTPATH/banner-template.html > $htmlfile
 
-sudo xvfb-run --server-args="-screen 0, 435x50x24" $SCRIPTPATH/webkit2png.py -o "$pngtemp" file:///$htmlfile
+sudo xvfb-run --server-args="-screen 0, 435x49x24" $SCRIPTPATH/webkit2png.py -o "$pngtemp" file:///$htmlfile
 cp "$pngtemp" "$outpng"
 
 rm -f $htmlfile
