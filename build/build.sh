@@ -18,7 +18,7 @@ mkdir -p $src
 mkdir -p $target/bin
 cd $src
 git clone https://github.com/devizer/h3control.git
-echo "[assembly: System.Reflection.AssemblyVersion(\"$ver.$build..0\")]" > $src/h3control/H3Control/Properties/AssemblyVersion.cs
+echo "[assembly: System.Reflection.AssemblyVersion(\"$ver.$build.0\")]" > $src/h3control/H3Control/Properties/AssemblyVersion.cs
 
 # root of repo
 cd h3control
@@ -28,10 +28,10 @@ rm -rf H3Control/{bin,obj}
 time ( xbuild H3Control.sln /t:Rebuild /p:Configuration=Release /verbosity:normal )
 
 cd H3Control/bin/Release
-cp -R . $target/bin
+cp -r $src/h3control/H3Control/bin/Release $target/bin
 
 cd $build/target
-cp -R . $target
+cp -r . $target
 echo $ver.$build > $target/VERSION
 
 cd $target/bin
