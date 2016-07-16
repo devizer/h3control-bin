@@ -1,7 +1,12 @@
 #!/bin/bash
-build=`dirname $0`
+pushd `dirname $0` > /dev/null
+build=`pwd`
+popd > /dev/null
+echo build directory is $build
+
 umount /m/v || true
 mount -a || true
+
 src=~/.build/h3control-tmp/source
 target=~/.build/h3control-tmp/target/h3control
 rm -rf `dirname $src`
