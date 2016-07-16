@@ -5,7 +5,7 @@ h3control is a console/daemon for H3 based PI board. It displays temperature, fr
 The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono (version 3.2), which supports ARM hard float arch, exposes .NET 4.5 runtime.
 
 ## installation
-Step 1: run h3control-console.sh
+Step 1: wget & run the *latest* h3control-console.sh
 ```bash
 cd /tmp
 wget -O h3control.tar.gz https://github.com/devizer/h3control-bin/raw/master/public/h3control.tar.gz
