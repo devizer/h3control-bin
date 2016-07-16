@@ -49,3 +49,4 @@ echo $ver.$build >  $SCRIPT/../staging/VERSION
 
 dt=`date +%s`
 echo "{ version: '$ver.$build', date: $dt }" > $SCRIPT/../staging/h3control-version.json
+
