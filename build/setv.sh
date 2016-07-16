@@ -7,3 +7,4 @@ echo NEW h3control version is $ver.$build
 git pull || true
 git commit -am "Building and deploing staging script: ($ver.$build)" || true
 git push
+sleep 2
