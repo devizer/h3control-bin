@@ -5,11 +5,11 @@ UPDATE 22
 
 
 UPDATE 21
-- Improoved responsiblity of frequency control - gauges are updated immediately in response to click|tap on frequency. Intervals of refresh extended to `10s`.
+- Improoved responsiblity of frequency control. E.g. gauges are updated immediately in response to click | tap on frequency. Intervals of refresh extended to `10s`.
 - Dashboard is redesigned. All the widgets of dashboard fit on a tablet 1024x768 or above.
-- Dashboard in disabled state (when orange pi is down) is also redesigned.
-- Added swap utilization column to the list of the top memory usage list
-- Added sorting choice for top processes list
+- Dashboard in disabled state (when H3-board is down) is also redesigned.
+- Added swap utilization column to the list of the top memory usage list.
+- Added sorting choice for top processes list.
 - Fixed permissions inside h3control.tar.gz
 
 
@@ -78,6 +78,7 @@ UPDATE 6:
 - Added versioning during build. Current version is 1.6.102.
 - Added h3control-install-daemon.sh to the tarball, default deployment path of the daemon is $HOME/bin/h3control
 - Improved handling of
+
     > /etc/init.d/h3control stop
 
 
@@ -95,7 +96,7 @@ UPDATE 4: Added command line parameters of http server and ip's white-list confi
 ````
 
 UPDATE 3:
-- Control CPU frequency
+- **Control** CPU frequency
 
 UPDATE 2: 
 - Added user defined limits of CPU & DDR frequency
