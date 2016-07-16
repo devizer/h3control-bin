@@ -3,6 +3,7 @@ UPDATE 22
 - Fixed launchers (h3control-console.sh & h3control-install-daemons.sh)
 - Building moved to github
 
+
 UPDATE 21
 - Improoved response of frequency comtrol - gauges are updated immediately in response to click|tap on frequency. Intervals of refresh extended to 10 sec.
 - Dashboard is redesigned. All the widgets of dashboard fit on a tablet 1024x768 or above.
@@ -11,27 +12,30 @@ UPDATE 21
 - Added sorting choice for top processes list
 - Fixed permissions inside h3control.tar.gz
 
+
 UPDATE 19 (1.19.386)
 - LESS colors, LESS gradients, LESS blur
 - Added preliminary top process list
+
 
 UPDATE 18 (1.18.310)
 - In ./h3control-install-daemon.sh script fixed support of Fedora and OpenSUSE.
 - Added info about mono and OS into logs.
 
+
 UPDATE 17
 - Added logging: log are writing into /var/tmp/h3control.logs/, /var/log/h3control.logs/ or /tmp/h3control.logs depending on permissions to that folder. h3control automatically trims own old logs.
 - Added optional password protection of changing frequency. Screenshot: h3control_v1.17_readonly_mode.  How Dow do we do it? First, encrypt password:
-
+````
     > ./h3control-console.sh -g=mySecret
-    > 7D018BB3DF0E523692845AF1F27E992CE8A41650
+    7D018BB3DF0E523692845AF1F27E992CE8A41650
+````
+Note, space before command above causes shell to eliminate the command from the history. By this way clear password will be stored nowhere. Finally, add parameter -p=7D018BB3DF0E523692845AF1F27E992CE8A41650 to h3control-console.sh or /etc/init.d/h3control daemon. For example:
 
-Copy the Code
-Note, space before command above causes shell to eliminate tha command from the history. By this way clear password will be stored nowhere. Finally, add parameter -p=7D018BB3DF0E523692845AF1F27E992CE8A41650 to h3control-console.sh or /etc/init.d/h3control daemon. For example:
-
+````
     > ./h3control-console.sh -p=7D018BB3DF0E523692845AF1F27E992CE8A41650 -b=*:5000
+````
 
-Copy the Code
 Without -p option behavior is the same as prev version - anybody from white-list, or anybody, could change frequency of an Orange PI
 
 
@@ -72,7 +76,7 @@ UPDATE 6.1:
 - Added H3 icon for desktop and mobile browsers
 
 UPDATE 6:
-- Added versioning during build. Current version is 1.6.102.  
+- Added versioning during build. Current version is 1.6.102.
 - Added h3control-install-daemon.sh to the tarball, default deployment path of the daemon is $HOME/bin/h3control
 - Improved handling of
     > /etc/init.d/h3control stop
