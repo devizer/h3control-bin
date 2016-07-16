@@ -4,6 +4,10 @@ build=`pwd`
 popd > /dev/null
 echo build directory is $build
 
+ver=$(cat ver)
+build=$(cat build)
+
+
 umount /m/v || true
 mount -a || true
 
@@ -14,6 +18,7 @@ mkdir -p $src
 mkdir -p $target/bin
 cd $src
 git clone https://github.com/devizer/h3control.git
+echo "[assembly: System.Reflection.AssemblyVersion(\"$ver.$build..0\")]" > $src/h3control/H3Control/Properties/AssemblyVersion.cs
 
 # root of repo
 cd h3control
@@ -27,6 +32,7 @@ cp -R . $target/bin
 
 cd $build/target
 cp -R . $target
+echo $ver.$build > $target/VERSION
 
 cd $target/bin
 chmod -R 644 .
