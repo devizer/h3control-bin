@@ -6,7 +6,7 @@ The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono, whi
 
 ## installation
 Step 1: run h3control-console.sh
-```
+```bash
 cd /tmp
 wget -O h3control.tar.gz https://github.com/devizer/h3control-bin/raw/master/public/h3control.tar.gz
 killall -q -12 mono || echo "stop of h3control is skipped"
