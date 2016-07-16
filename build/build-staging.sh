@@ -52,7 +52,7 @@ echo "{ version: '$ver.$build', date: $dt }" > $SCRIPT/../staging/h3control-vers
 
 cd $SCRIPT
 git pull
-git commit -am "Staging update: v$ver.$build, please ignore this update"
+git commit -am "Staging update: v$ver.$build, staging updates aren't recommended for upgrade"
 git push
 
 git tag v$ver.$build-staging
