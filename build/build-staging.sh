@@ -11,8 +11,8 @@ build=$(cat build)
 umount /m/v || true
 mount -a || true
 
-src=~/.build/h3control-tmp/source
-target=~/.build/h3control-tmp/target/h3control
+src=/tmp/.build/h3control-tmp/source
+target=/tmp/.build/h3control-tmp/target/h3control
 rm -rf `dirname $src`
 mkdir -p $src
 mkdir -p $target/bin

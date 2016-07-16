@@ -12,7 +12,7 @@ wget -O h3control.tar.gz https://github.com/devizer/h3control-bin/raw/master/pub
 killall -q -12 mono || echo "stop of h3control is skipped"
 rm -rf h3control
 tar xzf h3control.tar.gz
-sudo h3control/h3control-console.sh --binding=*:5000
+h3control/h3control-console.sh --binding=*:5000
 # this code also suitable for upgrade
 ```
 
