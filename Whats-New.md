@@ -98,4 +98,4 @@ UPDATE 2:
 - Added user defined limits of CPU & DDR frequency
 
 FIRST Version:
-![first version](https://github.com/devizer/h3control/raw/master/images/h3control_v1.21_normal.jpg "h3control in normal")
+![first version](https://github.com/devizer/h3control/raw/master/images/h3control-first.jpg "h3control first version")
