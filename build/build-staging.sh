@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 pushd `dirname $0` > /dev/null
 SCRIPT=`pwd`
 popd > /dev/null
@@ -26,7 +27,7 @@ packages=/m/v/_GIT/h3control/packages
 cp -R $packages .
 rm -rf H3Control/{bin,obj}
 time ( xbuild H3Control.sln /t:Rebuild /p:Configuration=Release /verbosity:normal )
-nu-c -labels ./H3Control.Tests/bin/Debug/H3Control.Tests.dll | tee H3Control.Tests.dll.log
+nu-c -labels ./H3Control.Tests/bin/Release/H3Control.Tests.dll | tee H3Control.Tests.dll.log
 
 cp -R $src/h3control/H3Control/bin/Release/* $target/bin
 for f in jqx-all.js jqxscheduler.js jqxgrid.js jqxscheduler.api.js jqxdatetimeinput.js jqxdatatable.js ; do
