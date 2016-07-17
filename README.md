@@ -24,17 +24,18 @@ Step 3: Return to your PI board and press Ctrl-C to stop consolas h3control. Ins
 h3control/h3control-install-daemon.sh
 ```
 
-## install/update h3control daemon (`PUBLIC`)
+## install/update h3control daemon (`PUBLIC` version)
 ```bash
 wget -q -O - https://github.com/devizer/h3control-bin/raw/master/build/target/h3control-install-daemon.sh | bash
 ```
 this command downloads public version of h3control into `$HOME/bin/h3control`, configures to start h3control during boot and start it after all. By the way, script h3control-install-daemon.sh is included into h3control.tar.gz distribution
 
-## launch h3control in console (STAGING version)
+## launch h3control in console (~~STAGING~~ version)
 ```bash
 wget -q -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash
 ```
 this command downloads staging version of h3control into `**/tmp/h3control**`, and starts that staging version after all. This command doesnt affects preinstalled h3control daemon. You can press Ctrl-C and return to preinstalled early h3control daemon using '/etc/init.d/h3control start'
+Usually staging version works fine, but it MAY not be tested by me.
 
 
 
