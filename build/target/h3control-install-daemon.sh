@@ -14,7 +14,7 @@ mkdir -p $HOME/bin
 # ***********************************************
 cd $HOME/bin
 wget -O h3control.tar.gz --no-check-certificate https://github.com/devizer/h3control-bin/raw/master/public/h3control.tar.gz
-killall -q -12 mono || echo "h3control isn't running"
+killall -q -12 mono || echo ""
 rm -rf h3control
 tar xzf h3control.tar.gz
 rm h3control.tar.gz
