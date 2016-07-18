@@ -59,7 +59,8 @@ git push
 export BUILD_LABEL=staging
 export BUILD_DATE=$(date +"%A, %B %d %Y %R %Z")
 export BUILT_VERSION="$ver.$build"
-$SCRIPT/banner/make-banner.sh ../staging/status.png
+$SCRIPT/banner/make-banner.sh ../staging/status-normal.png
+convert ../staging/status-normal.png -modulate 100,40,100  ../staging/status.png
 
 git commit -am "Staging updated: v$ver.$build. Staging distributions aren't recommended for upgrade"
 git push
