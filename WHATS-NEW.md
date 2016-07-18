@@ -1,4 +1,3 @@
-
 #### UPDATE 22
 - Important fix 1.22.542. It fixes wierd rare incomplete initialization of dashboard during loading
 - Fixed launchers (`h3control-console.sh` & `h3control-install-daemons.sh`)
@@ -70,12 +69,9 @@ Without -p option behavior is the same as prev version - anybody from white-list
 
 #### UPDATE 7 (1.7.116):
 - Fixed the vaule of the DDR RANGE
-- Added web app icons for mobile & desktop browsers
+- Added H3 icons for mobile & desktop browsers
 
-UPDATE 6.1:
-- Added H3 icon for desktop and mobile browsers
-
-UPDATE 6:
+#### UPDATE 6
 - Added versioning during build. Current version is 1.6.102.
 - Added h3control-install-daemon.sh to the tarball, default deployment path of the daemon is $HOME/bin/h3control
 - Improved handling of `/etc/init.d/h3control stop`
@@ -84,7 +80,9 @@ UPDATE 6:
 #### UPDATE 5:
 - Added 60 Mhz choice of a frequency
 
-UPDATE 4: Added command line parameters of http server and ip's white-list configuration:
+
+#### UPDATE 4: 
+- Added command line parameters of http server and ip's white-list configuration:
 ````
 ~>./h3control-console --help
     -b, --binding=VALUE         HTTP binding, e.g. ip:port, default is *:5000
