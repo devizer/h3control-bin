@@ -59,6 +59,7 @@ git push
 
 export BUILD_LABEL=staging
 export BUILD_DATE=$(date +"%A, %B %d %Y %R %Z")
+export BUILD_DATE=$(date +"%B %d")
 export BUILT_VERSION="$ver.$build"
 $SCRIPT/banner/make-banner.sh /tmp/status-normal.png
 convert /tmp/status-normal.png -modulate 100,40,100 -brightness-contrast 9x0 ../staging/status.png

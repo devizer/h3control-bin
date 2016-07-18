@@ -12,6 +12,7 @@ git push
 
 export BUILD_LABEL=public
 export BUILD_DATE=$(date +"%A, %B %d %Y %R %Z")
+export BUILD_DATE=$(date +"%B %d")
 export BUILT_VERSION="$fullver"
 $SCRIPT/banner/make-banner.sh ../public/status.png
 
