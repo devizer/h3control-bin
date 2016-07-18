@@ -77,9 +77,7 @@ UPDATE 6.1:
 UPDATE 6:
 - Added versioning during build. Current version is 1.6.102.
 - Added h3control-install-daemon.sh to the tarball, default deployment path of the daemon is $HOME/bin/h3control
-- Improved handling of
-
-    > /etc/init.d/h3control stop
+- Improved handling of `/etc/init.d/h3control stop`
 
 
 #### UPDATE 5:
@@ -95,11 +93,11 @@ UPDATE 4: Added command line parameters of http server and ip's white-list confi
     -n, --nologo                Hide logo
 ````
 
-UPDATE 3:
+#### UPDATE 3:
 - **Control** CPU frequency
 
-UPDATE 2: 
+#### UPDATE 2: 
 - Added user defined limits of CPU & DDR frequency
 
-FIRST Version:
+#### FIRST Version:
 ![first version](https://github.com/devizer/h3control-bin/raw/master/images/h3control-first.jpg   "h3control first version")
