@@ -8,13 +8,7 @@ The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono (ver
 ## launch using `h3control-console.sh`
 Step 1: wget & run the *latest* h3control-console.sh
 ```bash
-cd /tmp
-wget -O h3control.tar.gz https://github.com/devizer/h3control-bin/raw/master/public/h3control.tar.gz
-killall -q -12 mono || echo "stop of h3control is skipped"
-rm -rf h3control
-tar xzf h3control.tar.gz
-h3control/h3control-console.sh --binding=*:5000
-# this code also suitable for upgrade
+wget -q -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control.sh | bash
 ```
 
 Step 2: Switch to your `Firefox` | `Chrome` | `IE` | `Opera` | `Safary`, and check http://orange-pi-address:5000/ works fine. 
@@ -26,7 +20,7 @@ h3control/h3control-install-daemon.sh
 
 ## install/update h3control daemon (`PUBLIC` version)
 ```bash
-wget -q -O - https://github.com/devizer/h3control-bin/raw/master/build/target/h3control-install-daemon.sh | bash
+wget -q -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control-install-daemon.sh | bash
 ```
 this command downloads public version of h3control into `$HOME/bin/h3control`, configures to start h3control during boot and start it after all. By the way, script h3control-install-daemon.sh is included into h3control.tar.gz distribution
 
