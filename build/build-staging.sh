@@ -27,7 +27,7 @@ packages=/m/v/_GIT/h3control/packages
 # cp -R $packages .
 nuget restore H3Control.sln 
 rm -rf H3Control/{bin,obj}
-time ( xbuild H3Control.sln /t:Rebuild /p:Configuration=Release /verbosity:normal )
+time ( xbuild H3Control.sln /t:Rebuild /p:Configuration=Release /verbosity:mininal )
 nu-c -labels ./H3Control.Tests/bin/Release/H3Control.Tests.dll | tee H3Control.Tests.dll.log
 
 cp -R $src/h3control/H3Control/bin/Release/* $target/bin
