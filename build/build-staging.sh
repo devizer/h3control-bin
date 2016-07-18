@@ -69,7 +69,7 @@ git push
 git tag v$ver.$build-staging
 git push --tags
 
-echo
+echo ''
 echo '*************************'
 echo '         DONE            '
 sleep 5

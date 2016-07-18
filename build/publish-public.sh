@@ -21,3 +21,9 @@ git push
 
 git tag v$fullver-public
 git push --tags
+
+echo
+echo '*************************'
+echo '         DONE            '
+sleep 5
+
