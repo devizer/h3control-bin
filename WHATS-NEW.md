@@ -1,4 +1,4 @@
-#### UPDATE 23 (1.23.554)
+#### UPDATE 23 (1.23.559)
 - Added whats-new/history feature. 
 - Added _'New version available'_ notification.
 
