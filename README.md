@@ -26,7 +26,7 @@ this command downloads public version of h3control into `$HOME/bin/h3control`, c
 
 ## launch h3control in console (~~STAGING~~ version)
 ```bash
-wget -q -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash
+wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash
 ```
 this command downloads staging version of h3control into `**/tmp/h3control**`, and starts that staging version after all. This command doesnt affects preinstalled h3control daemon. You can press Ctrl-C and return to preinstalled early h3control daemon using '/etc/init.d/h3control start'
 Usually staging version works fine, but it MAY not be tested by me.
