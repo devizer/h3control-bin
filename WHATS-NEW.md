@@ -3,6 +3,7 @@
 - Added _'New version available'_ notification.
 - Removed roundtrip to server during dashboard initialization. 
 - Added handler of click on 'Buffers and Cache". It flushes kernel buffers :)
+- Fixed h3control on mono 3.2.8 (the oldest ARM-HF mono)
 
 #### UPDATE 22
 - Important fix 1.22.542. It fixes wierd rare incomplete initialization of dashboard during loading
