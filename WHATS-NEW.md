@@ -1,3 +1,7 @@
+#### UPDATE 23 (1.23.554)
+- Added whats-new/history feature. 
+- Added _'New version available'_ notification.
+
 #### UPDATE 22
 - Important fix 1.22.542. It fixes wierd rare incomplete initialization of dashboard during loading
 - Fixed launchers (`h3control-console.sh` & `h3control-install-daemons.sh`)
