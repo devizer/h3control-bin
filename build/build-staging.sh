@@ -23,6 +23,12 @@ mkdir -p $target/bin
 cd $src
 git clone https://github.com/devizer/h3control.git
 echo "[assembly: System.Reflection.AssemblyVersion(\"$ver.$build.0\")]" > $src/h3control/H3Control/Properties/AssemblyVersion.cs
+builddate=$(date --utc +"%a, %d %b %Y %T GMT")
+echo "
+   [assembly: System.Reflection.AssemblyVersion(\"$ver.$build.0\")]
+   [assembly: Universe.AssemblyBuildDateTime(\"$builddate\")]
+" > $src/h3control/H3Control/Properties/AssemblyVersion.cs
+
 
 # root of repo
 cd h3control
