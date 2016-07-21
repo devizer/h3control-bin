@@ -8,7 +8,7 @@ git pull
 echo.
 echo ********** ADD --all and COMPPIT **********
 git add --all
-git commit -am "update"
+git commit -am "sync"
 
 echo.
 echo **************** PUSH *********************
