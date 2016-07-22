@@ -82,4 +82,6 @@ git push --tags
 echo ''
 echo '*************************'
 echo '         DONE            '
+
+wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control.sh | bash
 sleep 5
