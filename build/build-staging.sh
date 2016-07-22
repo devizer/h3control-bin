@@ -83,5 +83,6 @@ echo ''
 echo '*************************'
 echo '         DONE            '
 
-wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control.sh | bash
-sleep 5
+wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash
+
+
