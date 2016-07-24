@@ -5,7 +5,7 @@ h3control is a console/daemon for H3 based PI board. It displays temperature, fr
 ## prerequisite
 The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono (version 3.2), which supports ARM hard float arch, exposes .NET 4.5 runtime.
 
-Optional prerequisites for launcher are `/bin/bash`, `dirname` and `pwd`. The are required by `h3control-console.sh` and `h3control-install-daemon.sh`
+Optional prerequisites for launcher are `/bin/bash`, `dirname` and `pwd`. They are required by `h3control-console.sh` and `h3control-install-daemon.sh`
 
 embedded http-server requires `mcs` for Razor engine in the PATH, and optionally `ps` for **top processes** widget.
 
