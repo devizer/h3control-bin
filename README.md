@@ -12,7 +12,7 @@ embedded http-server requires `mcs` for Razor engine in the PATH, and optionally
 By the way, h3control uses embedded http-server, so external http servers are not required.
 
 ## installation
-Short instruction: extract ![public/h3control.tar.gz](https://github.com/devizer/h3control-bin/blob/master/public/h3control.tar.gz] and launch `h3control-console.sh` or `h3control-install-daemon.sh`
+Short instruction: extract ![public/h3control.tar.gz](https://github.com/devizer/h3control-bin/blob/master/public/h3control.tar.gz) and launch `h3control-console.sh` or `h3control-install-daemon.sh`
 
 Shorter option 1 (launch h3control in shell)
 ```bash
