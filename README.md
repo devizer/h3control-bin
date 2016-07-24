@@ -1,13 +1,15 @@
 
 # h3control-bin [![travis status](https://travis-ci.org/devizer/h3control.svg?branch=master)](https://travis-ci.org/devizer/h3control)  <img src='https://github.com/devizer/h3control-bin/blob/master/public/status.png?raw=true' width='199' height='32' style='float: right' alt='public' title='public'></img><img src='https://github.com/devizer/h3control-bin/blob/master/staging/status.png?raw=true' width='199' height='32' style='float: right' alt='staging' title='staging'></img>
-h3control is a console/daemon for H3 based PI board. It displays temperature, frequency and usage via built-in http server. It allows to control min/max cpu and ddr frequency. This repository holds installers of h3control only
+h3control is a console/daemon for H3 based PI boards. It displays temperature, frequency and usage via built-in http server. It allows to control min/max cpu and ddr frequency. This repository holds installers of h3control only
+
+Web app is smoothly animated, supports wide range of browsers, including builtin browsers at many-years-old mobile devices.  Also it disables gauges when PI-board is down.
 
 ## prerequisite
 The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono (version 3.2), which supports ARM hard float arch, exposes .NET 4.5 runtime.
 
 Optional prerequisites for launcher are `/bin/bash`, `dirname` and `pwd`. They are required by `h3control-console.sh` and `h3control-install-daemon.sh`
 
-embedded http-server requires `mcs` for Razor engine in the PATH, and optionally `ps` for **top processes** widget.
+Embedded http-server requires `mcs` for Razor engine in the PATH, and optionally `ps` for **top processes** widget.
 
 By the way, h3control uses embedded http-server, so external http servers are not required.
 
