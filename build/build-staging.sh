@@ -82,7 +82,7 @@ git push --tags
 
 echo ''
 echo '*************************'
-echo "  DONE v$ver.$build-staging
+echo "  DONE v$ver.$build-staging"
 
 cd $src/..
 rm -rf *
