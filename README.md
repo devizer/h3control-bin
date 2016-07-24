@@ -5,33 +5,29 @@ h3control is a console/daemon for H3 based PI board. It displays temperature, fr
 ## prerequisite
 The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono (version 3.2), which supports ARM hard float arch, exposes .NET 4.5 runtime.
 
-## launch using `h3control-console.sh`
-Step 1: wget & run the *latest* h3control-console.sh
+Optional prerequisites for launcher are `/bin/bash`, `dirname` and `pwd`. The are required by `h3control-console.sh` and `h3control-install-daemon.sh`
+
+embedded http-server requires `mcs` for Razor engine in the PATH, and optionally `ps` for **top processes** widget.
+
+By the way, h3control uses embedded http-server, so external http servers are not required.
+
+## installation
+Short instruction: extract ![public/h3control.tar.gz](https://github.com/devizer/h3control-bin/blob/master/public/h3control.tar.gz] and launch `h3control-console.sh` or `h3control-install-daemon.sh`
+
+Shorter option 1 (launch h3control in shell)
 ```bash
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control.sh | bash
 ```
 
-Step 2: Switch to your `Firefox` | `Chrome` | `IE` | `Opera` | `Safary`, and check http://orange-pi-address:5000/ works fine. 
-
-Step 3: Return to your PI board and press Ctrl-C to stop consolas h3control. Install h3control daemon to start h3control during build
-```
-h3control/h3control-install-daemon.sh
-```
-
-## install/update h3control daemon (`PUBLIC` version)
+Shorter option 2 (launch h3control in shell)
 ```bash
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control-install-daemon.sh | bash
 ```
-this command downloads public version of h3control into `$HOME/bin/h3control`, configures to start h3control during boot and start it after all. By the way, script h3control-install-daemon.sh is included into h3control.tar.gz distribution
 
-## launch h3control in console (~~STAGING~~ version)
+Thats all. However its possible to launch so called staging version of h3control. Usually staging version works fine, but it MAY not be tested.
 ```bash
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash
 ```
-this command downloads staging version of h3control into `**/tmp/h3control**`, and starts that staging version after all. This command doesnt affects preinstalled h3control daemon. You can press Ctrl-C and return to preinstalled early h3control daemon using '/etc/init.d/h3control start'
-Usually staging version works fine, but it MAY not be tested by me.
-
-
 
 
 <a name="screenshots"></a>
