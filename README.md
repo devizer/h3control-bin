@@ -19,7 +19,7 @@ Shorter option 1 (launch h3control in shell)
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control.sh | bash
 ```
 
-Shorter option 2 (launch h3control in shell)
+Shorter option 2 (install h3control daemon and launch it)
 ```bash
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control-install-daemon.sh | bash
 ```
