@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash -e
+set -e
 pushd `dirname $0` > /dev/null
 SCRIPT=`pwd`
 popd > /dev/null
