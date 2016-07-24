@@ -85,7 +85,7 @@ echo '*************************'
 echo '         DONE            '
 
 cd $src/..
-# rm -rf *
+rm -rf *
 
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash
 
