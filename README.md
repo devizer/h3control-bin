@@ -24,7 +24,7 @@ Shorter option 2 (install h3control daemon and launch it)
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control-install-daemon.sh | bash
 ```
 
-Thats all. However its possible to launch so called staging version of h3control. Usually staging version works fine, but it MAY not be tested.
+Thats all. However its possible to launch so called ~~staging~~ version of h3control. Usually staging version works fine, but it MAY not be tested.
 ```bash
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash
 ```
