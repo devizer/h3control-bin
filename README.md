@@ -15,7 +15,11 @@ Optional prerequisites for launcher are `/bin/bash`, `dirname` and `pwd`. They a
 
 Embedded http-server requires `mcs` for MS Razor engine in the PATH. `mcs` is builtin mono's command, as well as `mono` command
 
+**Bell**-button (new version available notification) requires internet connection on your PI-board. h3control each 5 minutes fetches few bytes from github for checking new versions.
+
 By the way, h3control uses embedded http-server, so external http servers are not required.
+
+Finally, changing CPU or DDR frequency requires advanced priviledges.
 
 ## installation
 Short instruction: extract ![public/h3control.tar.gz](https://github.com/devizer/h3control-bin/raw/master/public/h3control.tar.gz) and launch `h3control-console.sh` or `h3control-install-daemon.sh`
