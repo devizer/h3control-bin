@@ -1,6 +1,6 @@
-#### UPDATE 24 (1.24.)
-- Added **OS name** on the dashboard.
-- Added **CPU usage** column to the top processes widget
+#### UPDATE 24 (1.24.632)
+- Added **OS name** to the dashboard.
+- Added **CPU usage** column to the top processes widget.
 
 #### UPDATE 23.1 (1.23.563)
 - Fixed h3control on ancient mono 3.2.8 (the first ARM-HF mono)
