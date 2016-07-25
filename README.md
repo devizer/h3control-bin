@@ -11,7 +11,7 @@ Optional prerequisites for launcher are `/bin/bash`, `dirname` and `pwd`. They a
 
 **CPU usage** & **Summary memory usage** widgets rely on `/proc` filesystem and linux kernel 3+. Optional
 
-Top processes widget relies upono `ps` command in the PATH. Optional
+**Top processes** widget relies upono `ps` command in the PATH. Optional
 
 Embedded http-server requires `mcs` for MS Razor engine in the PATH.
 
