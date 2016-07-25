@@ -22,14 +22,14 @@
 - Improoved responsiblity of frequency control. E.g. gauges are updated immediately in response to click | tap on frequency. Intervals of refresh extended to `10s`.
 - Dashboard is redesigned. All the widgets of dashboard fit on a tablet 1024x768 or above.
 - Dashboard in disabled state (when H3-board is down) is also redesigned.
-- Added swap utilization column to the list of the top memory usage list.
+- Added **swap** utilization column to the list of the top processes widget.
 - Added sorting choice for top processes list.
 - Fixed permissions inside h3control.tar.gz
 
 
 #### UPDATE 19 (1.19.386)
 - LESS colors, LESS gradients, LESS blur
-- Added preliminary top process list
+- Added preliminary &laquo;**top processes**&raquo; widget
 
 
 #### UPDATE 18 (1.18.310)
@@ -96,7 +96,7 @@ Without -p option behavior is the same as prev version - anybody from white-list
 
 
 #### UPDATE 4: 
-- Added command line parameters of http server and ip's white-list configuration:
+- Added command line **parameters** of http server and ip's white-list configuration:
 ````
 ~>./h3control-console --help
     -b, --binding=VALUE         HTTP binding, e.g. ip:port, default is *:5000
@@ -110,7 +110,7 @@ Without -p option behavior is the same as prev version - anybody from white-list
 - **Control** CPU frequency
 
 #### UPDATE 2: 
-- Added user defined limits of CPU & DDR frequency
+- Added user defined **limits** of CPU & DDR frequency
 
 #### FIRST Version:
 ![first version](https://github.com/devizer/h3control-bin/raw/master/images/h3control-first.jpg   "h3control first version")
