@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+echo 1536000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 pushd `dirname $0` > /dev/null
 SCRIPT=`pwd`
 popd > /dev/null
