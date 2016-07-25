@@ -4,6 +4,9 @@ v1.22.464-public-1-gd38767d
 V:\_GIT\h3control-bin>git describe --tags
 v1.22.464-public-1-gd38767d
 
+V:\_GIT\h3control-bin>git pull
+Already up-to-date.
+
 V:\_GIT\h3control-bin>git describe --tags
 v1.22.464-public-1-gd38767d
 
