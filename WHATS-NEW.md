@@ -1,13 +1,13 @@
 #### UPDATE 24 (1.24.632)
-- Added &laquot;**OS Name**&raquot; to the dashboard.
-- Added **CPU Usage** column to the top processes widget.
+- Added &laquo;**OS Name**&raquo; to the dashboard.
+- Added &laquo;**CPU Usage**&raquo; column to the top processes widget.
 
 #### UPDATE 23.1 (1.23.563)
 - Fixed h3control on ancient mono 3.2.8 (the first ARM-HF mono)
 
 #### UPDATE 23 (1.23.559)
 - Added whats-new/history feature. 
-- Added _'New version available'_ notification.
+- Added &laquo;New version available&raquo; notification.
 - Removed roundtrip to server during dashboard initialization. 
 - Added handler of click on 'Buffers and Cache". It flushes kernel buffers :)
 
