@@ -20,7 +20,7 @@ By the way, h3control uses embedded http-server, so external http servers are no
 ## installation
 Short instruction: extract ![public/h3control.tar.gz](https://github.com/devizer/h3control-bin/raw/master/public/h3control.tar.gz) and launch `h3control-console.sh` or `h3control-install-daemon.sh`
 
-Shorter option 1 (launch h3control in shell)
+Shorter option 1 (launch h3control in terminal)
 ```bash
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control.sh | bash
 ```
@@ -35,6 +35,7 @@ Thats all. However its possible to launch so called ~~staging~~ version of h3con
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash
 ```
 
+Consolas scripts download h3control.tar.gz into /tmp/h3control. daemon script downloads h3control.tar.gz into $HOME/bin/h3control
 
 <a name="screenshots"></a>
 ### Screenshot: h3control just works
