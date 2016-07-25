@@ -91,7 +91,6 @@ rm -rf *
 
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash &
 jobs
-id=$(jobs)
-disown $id
+disown 1
 echo DISOWNED
 sleep 22
