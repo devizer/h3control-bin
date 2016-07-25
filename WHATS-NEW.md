@@ -9,7 +9,7 @@
 - Added whats-new/history feature. 
 - Added &laquo;New version available&raquo; notification.
 - Removed roundtrip to server during dashboard initialization. 
-- Added handler of click on 'Buffers and Cache". It flushes kernel buffers :)
+- Added handler of click on &laquo;Buffers and Cache&raquo;. It flushes kernel buffers :)
 
 #### UPDATE 22
 - Important fix 1.22.542. It fixes wierd rare incomplete initialization of dashboard during loading
