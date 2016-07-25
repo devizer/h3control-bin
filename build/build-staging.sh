@@ -92,7 +92,7 @@ rm -rf *
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash &
 jobs
 echo ######################## 1
-disown
+disown %1
 echo ######################## 2
 jobs
 echo ######################## 3
