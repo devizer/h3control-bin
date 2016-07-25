@@ -98,3 +98,4 @@ echo ''
 echo '***********************'
 echo '       DISOWNED'
 echo ''
+exit 0;
