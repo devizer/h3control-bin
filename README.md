@@ -7,7 +7,7 @@ Web app is smoothly animated, supports wide range of browsers, including builtin
 ## prerequisite
 The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono (version 3.2), which supports ARM hard float arch, exposes .NET 4.5 runtime.
 
-Optional prerequisites for launcher are `/bin/bash`, `dirname` and `pwd`. They are required by `h3control-console.sh` and `h3control-install-daemon.sh`. Without them h3control could be started using `mono H3Control.exe --bindin*:5000` command
+Optional prerequisites for launcher are `/bin/bash`, `dirname` and `pwd`. They are required by `h3control-console.sh` and `h3control-install-daemon.sh`. Without them h3control could be started using `mono H3Control.exe --binding=*:5000` command
 
 **CPU usage** & **Summary memory usage** widgets rely on `/proc` filesystem and linux kernel 3+. Optional
 
