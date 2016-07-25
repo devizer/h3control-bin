@@ -1,4 +1,5 @@
 #!/bin/bash -e
+git config credential.helper store
 ver=$(cat ver)
 build=$(cat build)
 build=$(( $build + 1 ))
