@@ -26,6 +26,11 @@ git push --tags
 
 echo
 echo '*************************'
-echo '         DONE            '
+echo "DONE: v$fullver
+echo
+
+
 sleep 5
+wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control-install-daemon.sh | bash
+
 
