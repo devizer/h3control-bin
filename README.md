@@ -1,6 +1,6 @@
 
 # h3control-bin [![travis status](https://travis-ci.org/devizer/h3control.svg?branch=master)](https://travis-ci.org/devizer/h3control)  <img src='https://github.com/devizer/h3control-bin/blob/master/public/status.png?raw=true' width='199' height='32' style='float: right' alt='public' title='public'></img><img src='https://github.com/devizer/h3control-bin/blob/master/staging/status.png?raw=true' width='199' height='32' style='float: right' alt='staging' title='staging'></img>
-h3control is a console/daemon for H3 based PI boards. It displays temperature, frequency and usage via built-in http server. It allows to control min/max cpu and ddr frequency. This repository holds installers of h3control only
+h3control is a console/daemon for H3 based PI boards. It displays temperature, frequency and usage via built-in http server. It allows to control min/max CPU and DDR frequency. This repository holds installers of h3control only
 
 Web app is smoothly animated, supports wide range of browsers, including builtin browsers at many-years-old mobile devices.  Also it disables gauges when PI-board is down.
 
@@ -19,7 +19,7 @@ Embedded http-server requires `mcs` for MS Razor engine in the PATH. `mcs` is bu
 
 By the way, h3control uses embedded http-server, so external http servers are not required.
 
-Finally, changing CPU or DDR frequency requires advanced priviledges.
+Finally, changing CPU or DDR frequency requires advanced privileges.
 
 ## installation
 Short instruction: extract ![public/h3control.tar.gz](https://github.com/devizer/h3control-bin/raw/master/public/h3control.tar.gz) and launch `h3control-console.sh` or `h3control-install-daemon.sh`
