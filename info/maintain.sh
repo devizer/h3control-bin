@@ -10,4 +10,10 @@ du -h -d 2
 work=~/.tmp/maintaining/h3control-bin/work
 cd $work
 java -jar bfg-1.12.12.jar --strip-blobs-bigger-than 3M h3control-bin
+cd h3control-bin.git
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+git push
+
+
+
 # java -jar bfg-1.12.12.jar --strip-blobs-bigger-than 3M h3control-bin
