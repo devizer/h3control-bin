@@ -89,5 +89,5 @@ echo ''
 cd $src/..
 rm -rf *
 
-wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash  &
+wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash &
 sleep 22
