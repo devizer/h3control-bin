@@ -35,7 +35,7 @@ Thats all. However its possible to launch so called ~~staging~~ version of h3con
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3control-staging.sh | bash
 ```
 
-Consolas scripts download h3control.tar.gz into /tmp/h3control. daemon script downloads h3control.tar.gz into $HOME/bin/h3control
+Consolas scripts download h3control.tar.gz into /tmp/h3control. h3control-install-daemon.sh script downloads h3control.tar.gz into $HOME/bin/h3control
 
 <a name="screenshots"></a>
 ### Screenshot: h3control just works
