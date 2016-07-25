@@ -42,7 +42,7 @@ wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/staging/h3c
 Consolas scripts download h3control.tar.gz into /tmp/h3control. h3control-install-daemon.sh script downloads h3control.tar.gz into $HOME/bin/h3control
 
 ## history
-![WHATS-NEW.md](https://github.com/devizer/h3control-bin/WHATS-NEW.md)
+![WHATS-NEW.md](https://github.com/devizer/h3control-bin/blob/master/WHATS-NEW.md)
 
 <a name="screenshots"></a>
 ### Screenshot: h3control just works
