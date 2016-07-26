@@ -7,16 +7,13 @@ popd > /dev/null
 fullver=$(cat ../staging/VERSION)
 cp ../staging/* ../public
 
-git pull
-git commit -am "Public distribution updated: v$fullver"
-git push
-
 export BUILD_LABEL=public
 export BUILD_DATE=$(date +"%A, %B %d %Y %R %Z")
 export BUILD_DATE=$(date +"%B %d")
 export BUILT_VERSION="$fullver"
 $SCRIPT/banner/make-banner.sh ../public/status.png
 
+git pull
 git commit -am "Public distribution updated: v$fullver"
 git push
 
