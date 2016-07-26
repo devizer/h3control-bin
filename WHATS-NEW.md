@@ -1,10 +1,11 @@
 #### UPDATE 25
 - Layout of the dashboard rearranged.
+- Dashbord initialization accelerated.
 
 #### UPDATE 24 (1.24.632)
 - Added &laquo;**OS Name**&raquo; to the dashboard.
 - Added &laquo;**CPU Usage**&raquo; column to the top processes widget.
-- Fixed top processes' columns width (1.24.674)
+- Fixed top processes' columns width (1.24.674).
 
 #### UPDATE 23.1 (1.23.563)
 - Fixed h3control on ancient mono 3.2.8 (the first ARM-HF mono)
