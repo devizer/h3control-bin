@@ -46,15 +46,15 @@ Consolas scripts download h3control.tar.gz into /tmp/h3control. h3control-instal
 
 <a name="screenshots"></a>
 ### Screenshot: h3control just works
-![h3control in normal](https://github.com/devizer/h3control-bin/raw/master/images/h3control_v1.21_normal.jpg "h3control in normal")
+![h3control in normal](https://github.com/devizer/h3control-bin/raw/master/images/h3control_v1.25_normal.png "h3control in normal")
 
 
 ### Screenshot: h3control in readonly mode
-![h3control in readonly mode](https://github.com/devizer/h3control-bin/raw/master/images/h3control_v1.21_readonly.jpg "h3control in readonly mode")
+![h3control in readonly mode](https://github.com/devizer/h3control-bin/raw/master/images/h3control_v1.25_readonly.png "h3control in readonly mode")
 
 
 ### Screenshot: h3control is offline
-![h3control is offline](https://github.com/devizer/h3control-bin/raw/master/images/h3control_v1.21_offline.jpg "h3control is offline")
+![h3control is offline](https://github.com/devizer/h3control-bin/raw/master/images/h3control_v1.25_offline.png "h3control is offline")
 
 ### Screenshot: first version 0.1, not available now
 <center><img src='https://github.com/devizer/h3control-bin/raw/master/images/h3control-first.jpg' alt='h3control first build' border='0' width='840px' height='541px' style='width:840px; height:541px'></img></center>
