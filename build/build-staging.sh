@@ -64,9 +64,8 @@ dt=`date +%s`
 echo "{ version: '$ver.$build', date: $dt }" > $SCRIPT/../staging/h3control-version.json
 
 cd $SCRIPT
-git pull
-git commit -am "Staging update: v$ver.$build, staging updates aren't recommended for upgrade"
-git push
+# git commit -am "Staging update: v$ver.$build, staging updates aren't recommended for upgrade"
+# git push
 
 export BUILD_LABEL=staging
 export BUILD_DATE=$(date +"%A, %B %d %Y %R %Z")
@@ -75,6 +74,7 @@ export BUILT_VERSION="$ver.$build"
 $SCRIPT/banner/make-banner.sh /tmp/status-normal.png
 convert /tmp/status-normal.png -modulate 100,40,100 -brightness-contrast 9x0 ../staging/status.png
 
+git pull
 git commit -am "Staging updated: v$ver.$build. Staging distributions aren't recommended for upgrade"
 git push
 
@@ -91,7 +91,7 @@ rm -rf *
 
 wget -q -nv -O - https://raw.githubusercontent.com/devizer/h3control-bin/master/staging/h3control-staging.sh | bash &
 jobs
-sleep 18
+sleep 11
 echo ######################## 1
 disown %1
 echo ''
