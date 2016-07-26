@@ -6,4 +6,4 @@ GZIP=-9 find /tmp/h3control.logs | sort -r | head -9 | tar czf ~/h3-logs.tar.gz 
 
 or 
 
-tar czf ~/h3-logs.tar.gz /tmp/h3control.logs/
+GZIP -9 tar czf ~/h3-logs.tar.gz /tmp/h3control.logs/
