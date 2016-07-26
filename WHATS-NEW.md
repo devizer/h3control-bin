@@ -1,3 +1,6 @@
+#### UPDATE 25
+- Layout of the dashboard rearranged.
+
 #### UPDATE 24 (1.24.632)
 - Added &laquo;**OS Name**&raquo; to the dashboard.
 - Added &laquo;**CPU Usage**&raquo; column to the top processes widget.
