@@ -26,7 +26,7 @@ git push --tags
 
 echo
 echo '*************************'
-echo "DONE: v$fullver
+echo "DONE: v$fullver"
 echo
 
 
