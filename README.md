@@ -9,7 +9,7 @@ The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono (ver
 
 Optional prerequisites for launcher are `/bin/bash`, `dirname` and `pwd`. They are required by `h3control-console.sh` and `h3control-install-daemon.sh`. Without them h3control could be started using `mono H3Control.exe --binding=*:5000` command
 
-**CPU usage** & **Summary memory usage** widgets rely on `/proc` filesystem and linux kernel 3+. Optional
+**CPU usage** and **top processes** widgets rely on `/proc` filesystem and linux kernel 3+. Optional
 
 **Top processes** widget relies upon `ps` command in the PATH. Optional
 
