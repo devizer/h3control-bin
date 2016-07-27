@@ -90,13 +90,4 @@ echo ''
 cd $src/..
 rm -rf *
 
-wget -q -nv -O - https://raw.githubusercontent.com/devizer/h3control-bin/master/staging/h3control-staging.sh | bash &
-jobs
-sleep 24
-echo ######################## 1
-disown %1
-echo ''
-echo '***********************'
-echo '       DISOWNED'
-echo ''
-exit 0;
+wget -q -nv -O - https://raw.githubusercontent.com/devizer/h3control-bin/master/staging/h3control-staging.sh | bash
