@@ -2,6 +2,7 @@
 - Layout of the dashboard rearranged.
 - Dashbord initialization accelerated.
 - Added hostname to the dashboard title. 
+- &laquo;**CPU usage**&raquo; widget improved: added visualization during offline and initialization. Fixed underflow and overflow in normal mode.
 - Added description of network interfaces during http-server startup. Here is an example of normal output of startup:
 ```
 $ ./h3control-console.sh
