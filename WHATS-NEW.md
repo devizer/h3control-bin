@@ -1,6 +1,25 @@
 #### UPDATE 25
 - Layout of the dashboard rearranged.
 - Dashbord initialization accelerated.
+- Added hostname to the dashboard title. 
+- Added description of network interfaces during http-server startup. Here is an example of normal output of startup:
+```
+$ h3control-console.sh
+H3Control 1.25.716 is a console/daemon which
+   * "Displays" temperature, frequency and usage via built-in http server.
+   * Allows to control CPU & DDR frequency
+
+Configuration by command line:
+   Url is http://*:5000
+   Warning: white-list isn't specified, so ip restrictions are absent
+   Logs are located in /tmp/h3control.logs
+   h3control http-server is binding to all these network adapters:
+      - network 'eth0': 192.168.0.11, fe80::505f:83ff:fe19:fc6d%2
+      - network 'lo': 127.0.0.1, ::1
+
+HTTP server successefully has been started.
+Press Ctlr-C to quit.
+```
 
 #### UPDATE 24 (1.24.632)
 - Added &laquo;**OS Name**&raquo; to the dashboard.
