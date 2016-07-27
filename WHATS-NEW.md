@@ -64,13 +64,13 @@ Press Ctlr-C to quit.
 - Added logging: log are writing into /tmp/h3control.logs/, /var/log/h3control.logs/ or /var/tmp/h3control.logs depending on permissions to that folder. h3control automatically trims own old logs.
 - Added optional password protection of changing frequency. Screenshot: h3control_v1.17_readonly_mode.  How Dow do we do it? First, encrypt password:
 ````
-    > ./h3control-console.sh -g=mySecret
+    $ ./h3control-console.sh -g=mySecret
     7D018BB3DF0E523692845AF1F27E992CE8A41650
 ````
 Note, space before command above causes shell to eliminate the command from the history. By this way clear password will be stored nowhere. Finally, add parameter -p=7D018BB3DF0E523692845AF1F27E992CE8A41650 to h3control-console.sh or /etc/init.d/h3control daemon. For example:
 
 ````
-    > ./h3control-console.sh -p=7D018BB3DF0E523692845AF1F27E992CE8A41650 -b=*:5000
+    $ ./h3control-console.sh -p=7D018BB3DF0E523692845AF1F27E992CE8A41650 -b=*:5000
 ````
 Without -p option behavior is the same as prev version - anybody from white-list, or anybody, could change frequency of an Orange PI
 
