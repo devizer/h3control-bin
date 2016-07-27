@@ -11,6 +11,7 @@ build=$(cat build)
 build=$(( $build + 1 ))
 echo $build > build
 echo NEW h3control version is $ver.$build
+echo -ne "\033]0;${USER}@${HOSTNAME}:  -=== Building $ver.$build (h3control) ===-\007"
 
 
 umount /m/v || true
