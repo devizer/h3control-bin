@@ -91,7 +91,7 @@ rm -rf *
 
 wget -q -nv -O - https://raw.githubusercontent.com/devizer/h3control-bin/master/staging/h3control-staging.sh | bash &
 jobs
-sleep 11
+sleep 22
 echo ######################## 1
 disown %1
 echo ''
