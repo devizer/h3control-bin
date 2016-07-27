@@ -4,7 +4,7 @@
 - Added hostname to the dashboard title. 
 - Added description of network interfaces during http-server startup. Here is an example of normal output of startup:
 ```
-$ h3control-console.sh
+$ ./h3control-console.sh
 H3Control 1.25.716 is a console/daemon which
    * "Displays" temperature, frequency and usage via built-in http server.
    * Allows to control CPU & DDR frequency
