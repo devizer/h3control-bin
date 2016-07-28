@@ -1,3 +1,6 @@
+#### UPDATE 26
+- added resizing to **top processes** widget
+
 #### UPDATE 25
 - Layout of the dashboard rearranged.
 - Dashbord initialization accelerated.
