@@ -1,5 +1,5 @@
-#### UPDATE 27
-- Added "turn-off" button for hover process on **top processes** widget.
+#### UPDATE 27 (1.27.746)
+- Added "turn-off" button for hover process on **top processes** widget. Not yet available in public build.
 
 #### UPDATE 26
 - Added resizing to **top processes** widget
