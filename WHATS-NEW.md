@@ -1,5 +1,8 @@
+#### UPDATE 27
+- Added "turn-off" button for hover process on **top processes** widget.
+
 #### UPDATE 26
-- added resizing to **top processes** widget
+- Added resizing to **top processes** widget
 
 #### UPDATE 25
 - Layout of the dashboard rearranged.
