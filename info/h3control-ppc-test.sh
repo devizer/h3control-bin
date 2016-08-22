@@ -16,7 +16,7 @@ echo "
 
 cd h3control
 wget --no-check-certificate -O h3control-src-dependencies.zip 'https://github.com/devizer/glist/raw/master/bin/h3control-src-dependencies.zip'
-unzip -o h3control-src-dependencies.zip
+unzip -o -q h3control-src-dependencies.zip
 # nuget restore H3Control.sln 
 rm -rf H3Control/{bin,obj}
 time ( xbuild H3Control.sln /t:Rebuild /p:Configuration=Release /verbosity:mininal )
