@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-src=/tmp/.build/h3control-ppc
+src=/d2/.h3control-ppc-tests
 rm -rf $src
 mkdir -p $src
 cd $src

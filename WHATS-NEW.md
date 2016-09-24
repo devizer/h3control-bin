@@ -1,5 +1,6 @@
-#### UPDATE 27 (1.27.746)
+#### UPDATE 27 (1.27.748)
 - Added "turn-off" button for hover process on **top processes** widget. Not yet available in public build.
+- Added "flushing kernel buffers" visuals
 
 #### UPDATE 26
 - Added resizing to **top processes** widget
