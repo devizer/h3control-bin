@@ -5,17 +5,18 @@ h3control is a console/daemon for H3 based PI boards. It displays temperature, f
 Web app is smoothly animated, supports wide range of browsers, including builtin browsers at many-years-old mobile devices.  Also it disables gauges when PI-board is down.
 
 ## prerequisite
-The only prerequisite is mono with .NET 4.5 runtime. By the way, first mono (version 3.2), which supports ARM hard float arch, exposes .NET 4.5 runtime.
+The only mandatory prerequisite is mono with .NET 4.5 runtime. By the way, first mono (version 3.2), which supports ARM hard float arch, exposes .NET 4.5 runtime.
 
-Optional prerequisites for launcher are `/bin/bash`, `dirname` and `pwd`. They are required by `h3control-console.sh` and `h3control-install-daemon.sh`. Without them h3control could be started using `mono H3Control.exe --binding=*:5000` command
+All the another prerequisites are optional 
+- Optional prerequisites for launcher are `/bin/bash`, `dirname` and `pwd`. They are required by `h3control-console.sh` and `h3control-install-daemon.sh`. Without them h3control could be started using `mono H3Control.exe --binding=*:5000` command
 
-**CPU usage** and **top processes** widgets rely on `/proc` filesystem and linux kernel 3+. Optional
+- **CPU usage** and **top processes** widgets rely on `/proc` filesystem and linux kernel 3+. Optional
 
-**Top processes** widget relies upon `ps` command in the PATH. Optional
+- **Top processes** widget relies upon `ps` command in the PATH. Optional
 
-Embedded http-server requires `mcs` for MS Razor engine in the PATH. `mcs` is builtin mono's command, as well as `mono` command
+- Embedded http-server requires `mcs` for MS Razor engine in the PATH. `mcs` is builtin mono's command, as well as `mono` command
 
-**Bell**-button (new version available notification) requires internet connection on your PI-board. h3control each 5 minutes fetches few bytes from github for checking new versions.
+- **Bell**-button (new version available notification) requires internet connection on your PI-board. h3control each 5 minutes fetches few bytes from github for checking new versions. Internet connection on a PI board is optional.
 
 By the way, h3control uses embedded http-server, so external http servers are not required.
 
