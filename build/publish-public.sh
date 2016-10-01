@@ -13,7 +13,7 @@ export BUILD_DATE=$(date +"%B %d, %Y")
 export BUILT_VERSION="$fullver"
 $SCRIPT/banner/make-banner.sh ../public/status.png
 
-$SCRIPT/banner/make-svg-banner.sh ../public/status.svg
+bash $SCRIPT/banner/make-svg-banner.sh ../public/status.svg
 
 git pull
 git commit -am "Public distribution updated: v$fullver"
