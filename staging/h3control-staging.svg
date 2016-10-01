@@ -57,6 +57,20 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-122.23277,-45.796021)">
+
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="322.77423"
+       y="64.790161"
+       id="text10042"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10044"
+         x="505"
+         y="64.790161"
+         style="font-size:25px;text-anchor:end">September 17, 2016</tspan></text>
+     
     <path
        style="opacity:1;fill:#1940f5;fill-opacity:1;fill-rule:nonzero;stroke:#150d08;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 323.24805,65.013672 0,39.900388 180.72656,0 c 11.06178,0 19.9668,-4.86401 19.9668,-10.906248 l 0,-18.08789 c 0,-6.042239 -8.90502,-10.90625 -19.9668,-10.90625 l -180.72656,0 z"
@@ -91,17 +105,5 @@
          x="346.9874"
          id="tspan10040"
          sodipodi:role="line">1.27.749</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="322.77423"
-       y="64.790161"
-       id="text10042"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan10044"
-         x="505"
-         y="64.790161"
-         style="font-size:25px;text-anchor:end">September 17, 2016</tspan></text>
   </g>
 </svg>
