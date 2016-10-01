@@ -59,3 +59,6 @@ Consolas scripts download h3control.tar.gz into /tmp/h3control. h3control-instal
 
 ### Screenshot: first version 0.1, not available now
 <center><img src='https://github.com/devizer/h3control-bin/raw/master/images/h3control-first.jpg' alt='h3control first build' border='0' width='840px' height='541px' style='width:840px; height:541px'></img></center>
+
+
+# status as svg? <img src='https://github.com/devizer/h3control-bin/blob/master/staging/h3control-staging.svg?raw=true' width='199' height='32' style='float: right' alt='public' title='public'>

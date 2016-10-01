@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 402.20863 49.528409"
+   height="13.978018mm"
+   width="113.51221mm">
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-122.23277,-55.885651)"
+     id="layer1">
+    <path
+       id="rect10000"
+       d="m 323.24805,65.013672 0,39.900388 180.72656,0 c 11.06178,0 19.9668,-4.86401 19.9668,-10.906248 l 0,-18.08789 c 0,-6.042239 -8.90502,-10.90625 -19.9668,-10.90625 l -180.72656,0 z"
+       style="opacity:1;fill:#1940f5;fill-opacity:1;fill-rule:nonzero;stroke:#150d08;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="opacity:1;fill:#f54b19;fill-opacity:1;fill-rule:nonzero;stroke:#150d08;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 323.42613,65.013672 0,39.900388 -180.72656,0 c -11.06178,0 -19.9668,-4.86401 -19.9668,-10.906248 l 0,-18.08789 c 0,-6.042239 8.90502,-10.90625 19.9668,-10.90625 l 180.72656,0 z"
+       id="path10032" />
+    <text
+       id="text10034"
+       y="92.717285"
+       x="167.18025"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f0e9e9;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
+         y="92.717285"
+         x="167.18025"
+         id="tspan10036">PUBLIC</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f0e9e9;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="346.9874"
+       y="92.717285"
+       id="text10038"><tspan
+         id="tspan10040"
+         x="346.9874"
+         y="92.717285"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">1.27.749</tspan></text>
+    <text
+       id="text10042"
+       y="64.433014"
+       x="425.27423"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:11.25px"
+         y="64.433014"
+         x="425.27423"
+         id="tspan10044">September 17</tspan></text>
+  </g>
+</svg>
