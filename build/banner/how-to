@@ -1,6 +1,10 @@
 # http://stackoverflow.com/questions/10042388/program-that-convert-html-to-image
 
-sudo apt-get install python-qt4 libqt4-webkit python-pip xvfb -y
+sudo apt-get install python-qt4 python-pip xvfb -y
+# ubuntu 16
+sudo apt-get install libqtcore4 libqtgui4 -y
+# ubuntu 15 and 14
+sudo apt-get install libqt4-webkit -y
 wget -O /webkit2png.py https://raw.github.com/millisami/python-webkit2png/master/webkit2png.py
 chmod +x webkit2png.py
 sudo xvfb-run --server-args="-screen 0, 1024x768x24" ./webkit2png.py -o google.png http://www.google.com
