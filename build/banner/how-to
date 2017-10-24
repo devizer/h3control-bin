@@ -1,6 +1,6 @@
 # http://stackoverflow.com/questions/10042388/program-that-convert-html-to-image
 
-sudo apt-get install python-qt4 python-pip xvfb -y
+sudo apt-get install python-qt4 python-pip xvfb gettext -y
 # ubuntu 16
 sudo apt-get install libqtcore4 libqtgui4 -y
 # ubuntu 15 and 14
