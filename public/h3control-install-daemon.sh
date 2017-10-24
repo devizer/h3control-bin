@@ -66,7 +66,7 @@ _INIT_D_
 
 chmod +x /tmp/h3control.tmp
 sudo cp /tmp/h3control.tmp /etc/init.d/h3control
-command -v update-rc.d >/dev/null && sudo update-rc.d h3control remove
+command -v update-rc.d >/dev/null && sudo update-rc.d -f h3control remove
 command -v update-rc.d >/dev/null && sudo update-rc.d h3control defaults
 command -v chkconfig   >/dev/null && sudo chkconfig --level 2345 h3control off
 command -v chkconfig   >/dev/null && sudo chkconfig --level 2345 h3control on
