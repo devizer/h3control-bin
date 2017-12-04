@@ -1,3 +1,6 @@
+#### UPDATE 29
+- Added --pid-file option within `h3control-install-daemon.sh`.
+
 #### UPDATE 28
 - Fixed one-liner daemon instaler on Armbian
 
