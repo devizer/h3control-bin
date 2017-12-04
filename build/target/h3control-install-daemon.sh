@@ -37,8 +37,7 @@ deploydir=$(pwd)
 monocmd=$(command -v mono)
 killcmd=$(command -v kill)
 
-echo '
-#!/bin/bash
+echo '#!/bin/bash
 # /etc/init.d/h3control
 
 ### BEGIN INIT INFO
@@ -121,28 +120,28 @@ echo ""
 if [ -n "$hasUpdateRc" ]; then
   # debian derivaties
   echo "Configuring /etc/init.d/h3control init-script using update-rc.d tool"
+  sudo rm -f /etc/systemd/system/h3control.service
   sudo update-rc.d -f h3control remove
   sudo update-rc.d h3control defaults
-  sudo rm -f /etc/systemd/system/h3control.service
   /etc/init.d/h3control version
   sudo /etc/init.d/h3control start
   sleep 4
 elif [ -n "$hasChkConfig" ]; then
   # suse and redhat derivates
   echo "Configuring /etc/init.d/h3control init-script using chkconfig tool"
+  sudo rm -f /etc/systemd/system/h3control.service
   sudo chkconfig --level 2345 h3control off
   sudo chkconfig --level 2345 h3control on
-  sudo rm -f /etc/systemd/system/h3control.service
   /etc/init.d/h3control version
   sudo /etc/init.d/h3control start
   sleep 4
 elif [ -n "$hasSystemCtl" ]; then
   # another exotic linux/bsd
   echo "Configuring /etc/systemd/system/h3control.service unit using systemctl"
+  sudo rm -f /etc/init.d/h3control
   sudo systemctl disable h3control >/dev/null 2>&1
   sudo systemctl enable h3control
   sudo systemctl start h3control
-  sudo rm -f /etc/init.d/h3control
   sleep 4
 else
   echo "Unable to install daemon. System should support one of theese command:

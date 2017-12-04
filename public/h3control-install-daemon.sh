@@ -37,8 +37,7 @@ deploydir=$(pwd)
 monocmd=$(command -v mono)
 killcmd=$(command -v kill)
 
-echo '
-#!/bin/bash
+echo '#!/bin/bash
 # /etc/init.d/h3control
 
 ### BEGIN INIT INFO
@@ -69,7 +68,8 @@ case "$1" in
     if [ -n "$pid" ]; then
       # New h3control version
       echo Stopping h3control. Sending shutdown request to process $pid
-      kill -12 $pid        >/dev/null 2>&1 || echo "h3control isn'"'"'t running"
+      rm -f $pidfile >/dev/null 2>&1 || true
+      kill -12 $pid >/dev/null 2>&1 || echo "h3control isn'"'"'t running"
     else
       # Old h3control version
       echo "Stopping h3control"
