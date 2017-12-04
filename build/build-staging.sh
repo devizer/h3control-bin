@@ -10,7 +10,7 @@ pidfile=/var/run/h3control.pid
 
 # Stop Prev Version
 sudo systemctl stop h3control >/dev/null 2>&1 || true
-pid=$(cat $pidfile 2>/dev/null)
+if [ -f $pidfile ]; then pid=$(cat $pidfile 2>/dev/null); fi
 if [ -n "$pid" ]; then
   sudo kill -12 $pid        >/dev/null 2>&1 || true
 else
