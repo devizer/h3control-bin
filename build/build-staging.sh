@@ -39,8 +39,10 @@ packages=/m/v/_GIT/h3control/packages
 # cp -R $packages .
 nuget restore H3Control.sln 
 rm -rf H3Control/{bin,obj}
-time ( xbuild H3Control.sln /t:Rebuild /p:Configuration=Release /verbosity:mininal )
-nu-c -labels ./H3Control.Tests/bin/Release/H3Control.Tests.dll | tee H3Control.Tests.dll.log
+time ( xbuild H3Control.sln /t:Rebuild /p:Configuration=Release /v:q )
+
+pushd packages/NUnit.ConsoleRunner.*/tools; export RUNNER_PATH=$(pwd); popd; echo RUNNER_PATH: $RUNNER_PATH;
+mono $RUNNER_PATH/nunit3-console.exe -labels -workers=1 ./H3Control.Tests/bin/Release/H3Control.Tests.dll | tee H3Control.Tests.dll.log
 
 cp -R $src/h3control/H3Control/bin/Release/* $target/bin
 for f in jqx-all.js jqxscheduler.js jqxgrid.js jqxscheduler.api.js jqxdatetimeinput.js jqxdatatable.js ; do
