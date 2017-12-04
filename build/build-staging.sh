@@ -6,6 +6,17 @@ SCRIPT=`pwd`
 popd > /dev/null
 echo build directory is $SCRIPT
 
+pidfile=/var/run/h3control.pid
+
+# Stop Prev Version
+sudo systemctl stop h3control >/dev/null 2>&1 || true
+pid=$(cat $pidfile 2>/dev/null)
+if [ -n "$pid" ]; then
+  sudo kill -12 $pid        >/dev/null 2>&1 || true
+else
+  sudo killall -q -s 12 mono   >/dev/null 2>&1 || true
+fi
+
 ver=$(cat ver)
 build=$(cat build)
 build=$(( $build + 1 ))
