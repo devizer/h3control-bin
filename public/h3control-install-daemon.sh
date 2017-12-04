@@ -21,9 +21,10 @@ wget -O h3control.tar.gz --no-check-certificate https://github.com/devizer/h3con
 sudo systemctl stop h3control >/dev/null 2>&1 || true
 pid=$(cat $pidfile 2>/dev/null)
 if [ -n "$pid" ]; then
-  sudo kill -12 $pid        >/dev/null 2>&1 
+  rm -f $pidfile >/dev/null 2>&1 || true
+  sudo kill -12 $pid >/dev/null 2>&1 || true
 else
-  sudo killall -q -s 12 mono   >/dev/null 2>&1 
+  sudo killall -q -s 12 mono >/dev/null 2>&1 || true
 fi
 
 rm -rf h3control
@@ -119,28 +120,28 @@ echo ""
 if [ -n "$hasUpdateRc" ]; then
   # debian derivaties
   echo "Configuring /etc/init.d/h3control init-script using update-rc.d tool"
+  sudo rm -f /etc/systemd/system/h3control.service
   sudo update-rc.d -f h3control remove
   sudo update-rc.d h3control defaults
-  sudo rm -f /etc/systemd/system/h3control.service
   /etc/init.d/h3control version
   sudo /etc/init.d/h3control start
   sleep 4
 elif [ -n "$hasChkConfig" ]; then
   # suse and redhat derivates
   echo "Configuring /etc/init.d/h3control init-script using chkconfig tool"
+  sudo rm -f /etc/systemd/system/h3control.service
   sudo chkconfig --level 2345 h3control off
   sudo chkconfig --level 2345 h3control on
-  sudo rm -f /etc/systemd/system/h3control.service
   /etc/init.d/h3control version
   sudo /etc/init.d/h3control start
   sleep 4
 elif [ -n "$hasSystemCtl" ]; then
   # another exotic linux/bsd
   echo "Configuring /etc/systemd/system/h3control.service unit using systemctl"
+  sudo rm -f /etc/init.d/h3control
   sudo systemctl disable h3control >/dev/null 2>&1
   sudo systemctl enable h3control
   sudo systemctl start h3control
-  sudo rm -f /etc/init.d/h3control
   sleep 4
 else
   echo "Unable to install daemon. System should support one of theese command:
@@ -150,17 +151,3 @@ else
 fi
 exit;
 
-
-=======
-_INIT_D_
-
-chmod +x /tmp/h3control.tmp
-sudo cp /tmp/h3control.tmp /etc/init.d/h3control
-command -v update-rc.d >/dev/null && sudo update-rc.d -f h3control remove
-command -v update-rc.d >/dev/null && sudo update-rc.d h3control defaults
-command -v chkconfig   >/dev/null && sudo chkconfig --level 2345 h3control off
-command -v chkconfig   >/dev/null && sudo chkconfig --level 2345 h3control on
-/etc/init.d/h3control version
-sudo /etc/init.d/h3control start
-sleep 4
->>>>>>> 95b40a1f444a5e93e47301109587aa237061146a
