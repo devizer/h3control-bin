@@ -1,0 +1,48 @@
+#!/bin/sh
+# /etc/rc.d/h3control
+
+. /etc/rc.subr
+
+name="h3control"
+rcvar=`set_rcvar`
+extra_commands="version"
+version_cmd="h3control_version"
+
+pfile=/var/run/${name}.pid
+app_bin=/usr/local/bin/mono
+app_arg="--desktop /root/bin/h3control/bin/H3Control.exe --pid-file=$pfile --binding=*:5000"
+
+start_cmd="${name}_start"
+stop_cmd="${name}_stop"
+
+h3control_version() {
+  echo h3control version is $($app_bin $app_arg --version)
+}
+
+h3control_start() {
+    echo "Starting h3control."
+    mkdir -p /tmp
+    (nohup $app_bin $app_arg 1>/tmp/${name}-startup.log 2>&1 ) &
+    sleep 3
+    head -n 13 /tmp/${name}-startup.log | grep -v 'Ctlr-C' | grep -v 'Ctrl-C'
+}
+
+h3control_stop() {
+    pid=$(cat $pfile 2>/dev/null)
+    if [ -n "$pid" ]; then
+      printf "Stopping h3control. Sending shutdown request to process $pid "
+      rm -f $pfile >/dev/null 2>&1 || true
+      kill -12 $pid >/dev/null 2>&1 || true
+      counter=90; total=$counter;
+      while [ $counter -gt 0 ]; do
+        counter=$((counter-1));
+        if ! kill -0 $pid 2>/dev/null; then printf "\n${name} stopped\n"; break; else (sleep 1; printf "."); fi
+        if [ $counter -eq 0 ]; then printf "\nservice didn't stop correctly in $total seconds\n"; fi
+      done
+    else
+      echo h3control is"'"t running
+    fi
+}
+
+load_rc_config $name
+run_rc_command "$1"
