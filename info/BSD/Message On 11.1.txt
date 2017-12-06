@@ -1,0 +1,99 @@
+Message from freetype2-2.8:
+The 2.7.x series now uses the new subpixel hinting mode (V40 port's option) as
+the default, emulating a modern version of ClearType. This change inevitably
+leads to different rendering results, and you might change port's options to
+adapt it to your taste (or use the new "FREETYPE_PROPERTIES" environment
+variable).
+
+The environment variable "FREETYPE_PROPERTIES" can be used to control the
+driver properties. Example:
+
+FREETYPE_PROPERTIES=truetype:interpreter-version=35 \
+        cff:no-stem-darkening=1 \
+        autofitter:warping=1
+
+This allows to select, say, the subpixel hinting mode at runtime for a given
+application.
+
+The controllable properties are listed in the section "Controlling FreeType
+Modules" in the reference's table of contents
+(/usr/local/share/doc/freetype2/reference/ft2-toc.html, if documentation was installed).
+Message from libinotify-20170711_1:
+============================================================================
+
+Libinotify functionality on FreeBSD is missing support for
+
+  - detecting a file being moved into or out of a directory within the
+    same filesystem
+  - certain modifications to a symbolic link (rather than the
+    file it points to.)
+
+in addition to the known limitations on all platforms using kqueue(2)
+where various open and close notifications are unimplemented.
+
+This means the following regression tests will fail:
+
+Directory notifications:
+   IN_MOVED_FROM
+   IN_MOVED_TO
+
+Open/close notifications:
+   IN_OPEN
+   IN_CLOSE_NOWRITE
+   IN_CLOSE_WRITE
+
+Symbolic Link notifications:
+   IN_DONT_FOLLOW
+   IN_ATTRIB
+   IN_MOVE_SELF
+   IN_DELETE_SELF
+
+Kernel patches to address the missing directory and symbolic link
+notifications are available from:
+
+https://github.com/libinotify-kqueue/libinotify-kqueue/tree/master/patches
+
+=============================================================================
+You might want to consider increasing the kern.maxfiles tunable if you plan
+to use this library for applications that need to monitor activity of a lot
+of files.
+
+If the default on your system is too low, add the following line to
+/boot/loader.conf, then reboot the system:
+
+    kern.maxfiles="25000"
+=============================================================================
+Message from mono-4.8.1.0_2:
+************************************************************************
+If you have build/runtime errors with Mono and Gtk# apps please try the
+following first:
+
+* Build Mono and gtk+ (x11-toolkits/gtk20) without CPUTYPE and with the
+  default FreeBSD CFLAGS ('-O2 -fno-strict-aliasing -pipe') as Mono has
+  been known to expose compiler bugs.
+
+* Try building and running Mono with the GENERIC kernel.
+  - Mono requires SYSVSHM, SYSVMSG, and SYSVSEM which are part of the
+    GENERIC kernel.
+  - Removing kernel options or changing defaults to use experimental
+    options can adversely affect Mono's ability to build and run.
+
+* Remove leftover semaphores / increase semaphore limits.
+  - Close apps which use Mono and run `ipcs -sbt`.  Remove the
+    semaphores with MODE "--rw-------" and NSEMS "8" using ipcrm (1)
+  - _OR_ simply reboot which is the safest method.
+  - On multi-user systems the semaphore limits may need to be increased
+    from the defaults. The following should comfortably support 30 users.
+
+    # echo "kern.ipc.semmni=40" >> /boot/loader.conf
+    # echo "kern.ipc.semmns=300" >> /boot/loader.conf
+
+* If you are in a jailed environment, ensure System V IPC are enabled.
+  You can rely on the security.jail.sysvipc_allowed  sysctl to check
+  this status.  The following enables this feature on the host system:
+    # echo "jail_sysvipc_allow=\"YES\"" >> /etc/rc.conf
+
+* Some process information are accessed through /proc (e.g. when using
+  NUnit) and procfs(5) has to be mounted for these features to work:
+    # echo "proc            /proc   procfs  rw 0 0" >> /etc/fstab
+************************************************************************

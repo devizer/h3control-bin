@@ -1,6 +1,6 @@
 #!/bin/bash
 cd /tmp
-wget -O h3control.tar.gz https://github.com/devizer/h3control-bin/raw/master/public/h3control.tar.gz
+wget --no-check-certificate -O h3control.tar.gz https://github.com/devizer/h3control-bin/raw/master/public/h3control.tar.gz
 
 pidfile=/var/run/h3control.pid
 

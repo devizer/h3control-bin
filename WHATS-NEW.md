@@ -1,4 +1,4 @@
-#### UPDATE 29 (1.29.772)
+#### UPDATE 29 (1.29.773)
 - Added --pid-file option and `h3control-install-daemon.sh` updated.
 
 #### UPDATE 28

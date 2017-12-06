@@ -15,7 +15,7 @@ mkdir -p $HOME/bin
 cd $HOME/bin
 pidfile=/var/run/h3control.pid
 
-wget -O h3control.tar.gz --no-check-certificate https://github.com/devizer/h3control-bin/raw/master/public/h3control.tar.gz
+wget --no-check-certificate -O h3control.tar.gz --no-check-certificate https://github.com/devizer/h3control-bin/raw/master/public/h3control.tar.gz
 
 # Stop Prev Version
 sudo systemctl stop h3control >/dev/null 2>&1 || true
