@@ -22,7 +22,7 @@ sudo systemctl stop h3control >/dev/null 2>&1 || true
 pid=$(cat $pidfile 2>/dev/null)
 if [ -n "$pid" ]; then
   rm -f $pidfile >/dev/null 2>&1 || true
-  sudo kill -12 $pid >/dev/null 2>&1 || true
+  sudo kill $pid >/dev/null 2>&1 || true
 else
   sudo killall -q -s 12 mono >/dev/null 2>&1 || true
 fi
@@ -59,7 +59,8 @@ case "$1" in
   start)
     echo "Starting h3control"
     # logs are usually written to /tmp/h3control.logs/
-    (nohup mono --desktop "'$deploydir'/bin/H3Control.exe" --pid-file=$pidfile --binding=*:5000 1>/dev/null 2>&1 ) &
+    mkdir -p /tmp
+    (nohup mono --desktop "'$deploydir'/bin/H3Control.exe" --pid-file=$pidfile --binding=*:5000 1>/tmp/h3control-startup.log 2>&1 ) &
     ;;
   version)
     echo h3control daemon version is `mono "'$deploydir'/bin/H3Control.exe" --version` || echo h3control daemon is unavailable. please reinstall.
@@ -70,7 +71,7 @@ case "$1" in
       # New h3control version
       echo Stopping h3control. Sending shutdown request to process $pid
       rm -f $pidfile >/dev/null 2>&1 || true
-      kill -12 $pid >/dev/null 2>&1 || echo "h3control isn'"'"'t running"
+      kill $pid >/dev/null 2>&1 || echo "h3control isn'"'"'t running"
     else
       # Old h3control version
       echo "Stopping h3control"
