@@ -24,7 +24,7 @@ if [ -n "$pid" ]; then
   rm -f $pidfile >/dev/null 2>&1 || true
   sudo kill $pid >/dev/null 2>&1 || true
 else
-  sudo killall -q -s 12 mono >/dev/null 2>&1 || true
+  sudo killall -q mono >/dev/null 2>&1 || true
 fi
 
 rm -rf h3control
@@ -103,11 +103,11 @@ WorkingDirectory='$deploydir'/bin
 User=root
 Group=root
 ExecStart='$monocmd $deploydir'/bin/H3Control.exe --pid-file=/var/run/h3control.pid --binding=*:5000
-ExecStop='$killcmd' -12 $MAINPID
+ExecStop='$killcmd' $MAINPID
 SuccessExitStatus=SIGKILL SIGUSR2
 TimeoutSec=30
 Restart=on-failure
-RestartSec=10
+RestartSec=7
 
 [Install]
 WantedBy=multi-user.target
@@ -118,12 +118,22 @@ hasUpdateRc=""; hasChkConfig=""; hasSystemCtl=""
 command -v update-rc.d >/dev/null && hasUpdateRc=true
 command -v chkconfig >/dev/null && hasChkConfig=true
 command -v systemctl >/dev/null && hasSystemCtl=true
+if [ -n "hasSystemCtl" ] && pgrep systemd-journal >/dev/null 2>&1; then hasSystemD=true; fi
 echo ""
-if [ -n "$hasUpdateRc" ]; then
+if [ -n "$hasSystemD" ]; then
+  # another exotic linux/bsd
+  echo "Configuring /etc/systemd/system/h3control.service unit using systemctl"
+  (sudo update-rc.d -f h3control remove >/dev/null 2>&1) || true
+  sudo rm -f /etc/init.d/h3control
+  sudo systemctl disable h3control >/dev/null 2>&1 || true
+  sudo systemctl enable h3control
+  sudo systemctl start h3control
+  sleep 4
+elif [ -n "$hasUpdateRc" ]; then
   # debian derivaties
   echo "Configuring /etc/init.d/h3control init-script using update-rc.d tool"
   sudo rm -f /etc/systemd/system/h3control.service
-  sudo update-rc.d -f h3control remove
+  sudo update-rc.d -f h3control remove || true
   sudo update-rc.d h3control defaults
   /etc/init.d/h3control version
   sudo /etc/init.d/h3control start
@@ -132,18 +142,10 @@ elif [ -n "$hasChkConfig" ]; then
   # suse and redhat derivates
   echo "Configuring /etc/init.d/h3control init-script using chkconfig tool"
   sudo rm -f /etc/systemd/system/h3control.service
-  sudo chkconfig --level 2345 h3control off
+  sudo chkconfig --level 2345 h3control off || true
   sudo chkconfig --level 2345 h3control on
   /etc/init.d/h3control version
   sudo /etc/init.d/h3control start
-  sleep 4
-elif [ -n "$hasSystemCtl" ]; then
-  # another exotic linux/bsd
-  echo "Configuring /etc/systemd/system/h3control.service unit using systemctl"
-  sudo rm -f /etc/init.d/h3control
-  sudo systemctl disable h3control >/dev/null 2>&1
-  sudo systemctl enable h3control
-  sudo systemctl start h3control
   sleep 4
 else
   echo "Unable to install daemon. System should support one of theese command:
