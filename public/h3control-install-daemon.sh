@@ -122,7 +122,7 @@ if [ -n "hasSystemCtl" ] && pgrep systemd-journal >/dev/null 2>&1; then hasSyste
 echo ""
 if [ -n "$hasSystemD" ]; then
   # another exotic linux/bsd
-  echo "Configuring /etc/systemd/system/h3control.service unit using systemctl"
+  echo "Configuring /etc/systemd/system/h3control.service unit using systemctl (SystemD)"
   (sudo update-rc.d -f h3control remove >/dev/null 2>&1) || true
   sudo rm -f /etc/init.d/h3control
   sudo systemctl disable h3control >/dev/null 2>&1 || true
