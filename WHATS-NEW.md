@@ -1,6 +1,6 @@
 #### UPDATE 30 (1.29.773)
 - Default daemon managment changed to SystemD, if available. SysV Init (update-rc.d and chkconfig) are also supported.
-- Since this update an j3control-daemon process is automatically restarted on sigfault/crash.
+- Since this update an h3control-daemon process is automatically restarted on sigfault/crash.
 
 #### UPDATE 29 (1.29.773)
 - Added --pid-file option and `h3control-install-daemon.sh` updated.
