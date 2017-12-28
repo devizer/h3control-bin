@@ -1,4 +1,4 @@
-#### UPDATE 31 (1.30.785)
+#### UPDATE 31 (1.31.785)
 - Added control of **online cores**. 
 
 #### UPDATE 30 (1.30.780)
