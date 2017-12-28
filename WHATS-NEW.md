@@ -1,3 +1,6 @@
+#### UPDATE 31 (1.30.785)
+- Added control of **online cores**. 
+
 #### UPDATE 30 (1.30.780)
 - Default daemon managment changed to SystemD, if available. SysV Init (update-rc.d and chkconfig) are also supported.
 
