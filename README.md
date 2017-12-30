@@ -47,7 +47,7 @@ Consolas scripts download h3control.tar.gz into /tmp/h3control. h3control-instal
 
 <a name="screenshots"></a>
 ### Screenshot: h3control just works
-![h3control in normal](https://github.com/devizer/h3control-bin/raw/master/images/h3control_v1.25_normal.png "h3control in normal")
+![h3control in normal](https://github.com/devizer/h3control-bin/raw/master/images/h3control_v1.31_normal.png "h3control in normal")
 
 
 ### Screenshot: h3control in readonly mode
