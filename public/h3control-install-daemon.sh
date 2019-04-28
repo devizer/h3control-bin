@@ -35,7 +35,8 @@ cd h3control
 
 deploydir=$(pwd)
 monocmd=$(command -v mono)
-killcmd=$(command -v kill)
+killcmd=$(which kill)
+if [ -z $killcmd ]; then killcmd=$(command -v kill); fi
 bashcmd=$(command -v bash)
 
 echo '#!'$bashcmd'
@@ -85,7 +86,6 @@ case "$1" in
 esac
 
 exit 0
-<<<<<<< HEAD
 ' | sudo tee /etc/init.d/h3control >/dev/null
 sudo chmod +x /etc/init.d/h3control
 
