@@ -1,5 +1,13 @@
 #!/bin/bash
 set -e
+
+function say() {
+  title=$1
+  message=$2
+  echo -ne "\033]0;${USER}@${HOSTNAME}:  -=== Building $ver.$build (h3control) ===-\007"
+  LightGreen='\033[1;32m';Yellow='\033[1;33m';RED='\033[0;31m'; NC='\033[0m'; printf "\n${LightGreen}::>>${NC} ${Yellow}$message${NC}\n";
+}
+
 echo 1536000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 pushd `dirname $0` > /dev/null
 SCRIPT=`pwd`
@@ -22,7 +30,7 @@ build=$(cat build)
 build=$(( $build + 1 ))
 echo $build > build
 echo NEW h3control version is $ver.$build
-echo -ne "\033]0;${USER}@${HOSTNAME}:  -=== Building $ver.$build (h3control) ===-\007"
+say "" "Cloning"
 
 
 umount /m/v || true
@@ -48,13 +56,18 @@ echo "
 cd h3control
 packages=/m/v/_GIT/h3control/packages
 # cp -R $packages .
+say "" "NUGET Restore"
 nuget restore H3Control.sln -Verbosity quiet
 rm -rf H3Control/{bin,obj}
+
+say "" "XBUILD Rebuild Release"
 time ( xbuild H3Control.sln /t:Rebuild /p:Configuration=Release /v:q )
 
+say "" "NUNIT Testing"
 pushd packages/NUnit.ConsoleRunner.*/tools; export RUNNER_PATH=$(pwd); popd; echo RUNNER_PATH: $RUNNER_PATH;
 mono $RUNNER_PATH/nunit3-console.exe -labels=On -workers=1 ./H3Control.Tests/bin/Release/H3Control.Tests.dll | tee H3Control.Tests.dll.log
 
+say "" "Prepare h3control.tar.gz"
 cp -R $src/h3control/H3Control/bin/Release/* $target/bin
 for f in jqx-all.js jqxscheduler.js jqxgrid.js jqxscheduler.api.js jqxdatetimeinput.js jqxdatatable.js ; do
   rm $target/bin/web/jqwidgets/$f
@@ -88,12 +101,18 @@ export BUILT_VERSION="$ver.$build"
 # $SCRIPT/banner-v2/make-banner.sh /tmp/status-normal.png
 # convert /tmp/status-normal.png -modulate 100,40,100 -brightness-contrast 9x0 ../staging/status.png
 
+say "" "Prepare status.svg"
+
 bash $SCRIPT/banner-v2/make-svg-banner.sh ../staging/status.svg
+
+say "" "PUSH h3control.tar.gz, etc"
 
 git pull
 git commit -am "Staging updated: v$ver.$build. Staging distributions aren't recommended for upgrade"
 git push
 
+
+say "" "PUSH tag"
 git tag v$ver.$build-staging
 git push --tags
 
