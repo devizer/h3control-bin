@@ -105,4 +105,5 @@ echo ''
 cd $src/..
 rm -rf *
 
+
 wget -q -nv -O - https://raw.githubusercontent.com/devizer/h3control-bin/master/staging/h3control-staging.sh | bash
