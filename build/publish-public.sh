@@ -30,4 +30,5 @@ echo
 
 
 sleep 5
+export HTTP_PORT=5009
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control-install-daemon.sh | bash
