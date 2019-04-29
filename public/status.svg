@@ -83,7 +83,7 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f0e9e9;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:'DejaVu Sans',Verdana,Geneva,sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f0e9e9;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="167.18025"
        y="92.717285"
        id="text10034"
@@ -92,18 +92,18 @@
          id="tspan10036"
          x="167.18025"
          y="92.717285"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">public</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:'DejaVu Sans',Verdana,Geneva,sans-serif;-inkscape-font-specification:'sans-serif Bold'">public</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text10038"
        y="92.717285"
        x="346.9874"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f0e9e9;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:'DejaVu Sans',Verdana,Geneva,sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f0e9e9;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25px;font-family:'DejaVu Sans',Verdana,Geneva,sans-serif;-inkscape-font-specification:'sans-serif Bold'"
          y="92.717285"
          x="346.9874"
          id="tspan10040"
-         sodipodi:role="line">1.32.820</tspan></text>
+         sodipodi:role="line">1.32.821</tspan></text>
   </g>
 </svg>
