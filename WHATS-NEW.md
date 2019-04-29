@@ -1,3 +1,6 @@
+#### UPDATE 32 (1.32.811)
+- Fixed errors for Armbian **mainline** kernel (4.*). 
+
 #### UPDATE 31 (1.31.797)
 - Added control of **online cores**. 
 
