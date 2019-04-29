@@ -8,7 +8,6 @@ SCRIPTPATH=`pwd`
 popd > /dev/null
 
 if [ -z "$HTTP_PORT" ]; then HTTP_PORT=5000; fi
-echo "Listening port is $HTTP_PORT"
 
 mkdir -p $HOME/bin
 
@@ -123,6 +122,7 @@ command -v chkconfig >/dev/null && hasChkConfig=true
 command -v systemctl >/dev/null && hasSystemCtl=true
 if [ -n "hasSystemCtl" ] && pgrep systemd-journal >/dev/null 2>&1; then hasSystemD=true; fi
 echo ""
+echo "HTTP Listener port is $HTTP_PORT"
 if [ -n "$hasSystemD" ]; then
   # another exotic linux/bsd
   echo "Configuring /etc/systemd/system/h3control.service unit using systemctl (SystemD)"
