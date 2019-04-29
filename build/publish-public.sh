@@ -7,7 +7,8 @@ popd > /dev/null
 fullver=$(cat ../staging/VERSION)
 cp ../staging/* ../public
 
-export LABEL_COLOR=2d4e00
+export LABEL_COLOR=4F4F4F
+export VER_COLOR=2d4e00
 export BUILD_LABEL=public
 export BUILD_DATE=$(date +"%A, %B %d %Y %R %Z")
 export BUILD_DATE=$(date +"%B %d, %Y")
