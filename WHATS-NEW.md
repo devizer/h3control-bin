@@ -1,5 +1,6 @@
-#### UPDATE 32 (1.32.811)
-- Fixed errors for Armbian **mainline** kernel (4.*). 
+#### UPDATE 32 (1.32.821)
+- Fixed crashes for Armbian **mainline** kernel (4.*). 
+- Added HTTP_PORT parameter for single-line daemon installer. Default is 5000
 
 #### UPDATE 31 (1.31.797)
 - Added control of **online cores**. 

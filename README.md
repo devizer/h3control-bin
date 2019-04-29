@@ -31,6 +31,8 @@ wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3co
 
 Shorter option 2 (install h3control daemon and launch it)
 ```bash
+# 5000th is the default port. It can be omitted.
+export HTTP_PORT=5000
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control-install-daemon.sh | bash
 ```
 
