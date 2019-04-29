@@ -122,5 +122,5 @@ echo ''
 cd $src/..
 rm -rf *
 
-say "" "DONE. Download and install v$ver.$build-staging"
+say "DONE. Download and install v$ver.$build-staging"
 wget -q -nv -O - https://raw.githubusercontent.com/devizer/h3control-bin/master/staging/h3control-staging.sh | bash
