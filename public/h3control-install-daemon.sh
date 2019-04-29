@@ -7,6 +7,9 @@ pushd `dirname $0` > /dev/null
 SCRIPTPATH=`pwd`
 popd > /dev/null
 
+if [ -z "$HTTP_PORT" ]; then HTTP_PORT=5000; fi
+echo "Listening port is $HTTP_PORT"
+
 mkdir -p $HOME/bin
 
 # ********************************************************************
@@ -61,7 +64,7 @@ case "$1" in
     echo "Starting h3control"
     # logs are usually written to /tmp/h3control.logs/
     mkdir -p /tmp
-    (nohup mono --desktop "'$deploydir'/bin/H3Control.exe" --pid-file=$pidfile --binding=*:5000 1>/tmp/h3control-startup.log 2>&1 ) &
+    (nohup mono --desktop "'$deploydir'/bin/H3Control.exe" --pid-file=$pidfile --binding=*:'$HTTP_PORT' 1>/tmp/h3control-startup.log 2>&1 ) &
     ;;
   version)
     echo h3control daemon version is `mono "'$deploydir'/bin/H3Control.exe" --version` || echo h3control daemon is unavailable. please reinstall.
@@ -102,7 +105,7 @@ PIDFile=/var/run/h3control.pid
 WorkingDirectory='$deploydir'/bin
 User=root
 Group=root
-ExecStart='$monocmd $deploydir'/bin/H3Control.exe --pid-file=/var/run/h3control.pid --binding=*:5000
+ExecStart='$monocmd $deploydir'/bin/H3Control.exe --pid-file=/var/run/h3control.pid --binding=*:'$HTTP_PORT'
 ExecStop='$killcmd' $MAINPID
 SuccessExitStatus=SIGKILL SIGUSR2
 TimeoutSec=30
