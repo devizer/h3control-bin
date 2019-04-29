@@ -5,7 +5,7 @@ counter=0;
 function say() {
   counter=$((counter+1))
   message=$1
-  echo -ne "\033]0;${USER}@${HOSTNAME}:  -=== Building $ver.$build (h3control) ===-\007"
+  echo -ne "\033]0;-== Building $ver.$build (h3control) as ${USER}@${HOSTNAME} ==-\007"
   LightGreen='\033[1;32m';Yellow='\033[1;33m';RED='\033[0;31m'; NC='\033[0m'; printf "\n${LightGreen}$ver.$build Step $counter:${NC} ${Yellow}$message${NC}\n";
 }
 
@@ -17,7 +17,8 @@ echo build directory is $SCRIPT
 
 pidfile=/var/run/h3control.pid
 
-# Stop Prev Version
+# do not stop production
+function _ignore_kill_of_prod_() {
 sudo systemctl stop h3control >/dev/null 2>&1 || true
 if [ -f $pidfile ]; then pid=$(cat $pidfile 2>/dev/null); fi
 if [ -n "$pid" ]; then
@@ -25,6 +26,7 @@ if [ -n "$pid" ]; then
 else
   sudo killall -q -s 12 mono   >/dev/null 2>&1 || true
 fi
+}
 
 ver=$(cat ver)
 build=$(cat build)
