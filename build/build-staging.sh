@@ -94,6 +94,7 @@ cd $SCRIPT
 # git commit -am "Staging update: v$ver.$build, staging updates aren't recommended for upgrade"
 # git push
 
+export LABEL_COLOR=d64b4b
 export BUILD_LABEL=staging
 export BUILD_DATE=$(date +"%A, %B %d %Y %R %Z")
 export BUILD_DATE=$(date +"%B %d, %Y")
