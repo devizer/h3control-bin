@@ -85,10 +85,10 @@ export BUILD_LABEL=staging
 export BUILD_DATE=$(date +"%A, %B %d %Y %R %Z")
 export BUILD_DATE=$(date +"%B %d, %Y")
 export BUILT_VERSION="$ver.$build"
-$SCRIPT/banner/make-banner.sh /tmp/status-normal.png
-convert /tmp/status-normal.png -modulate 100,40,100 -brightness-contrast 9x0 ../staging/status.png
+# $SCRIPT/banner-v2/make-banner.sh /tmp/status-normal.png
+# convert /tmp/status-normal.png -modulate 100,40,100 -brightness-contrast 9x0 ../staging/status.png
 
-bash $SCRIPT/banner/make-svg-banner.sh ../staging/status.svg
+bash $SCRIPT/banner-v2/make-svg-banner.sh ../staging/status.svg
 
 git pull
 git commit -am "Staging updated: v$ver.$build. Staging distributions aren't recommended for upgrade"
