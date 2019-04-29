@@ -11,7 +11,7 @@ export BUILD_LABEL=public
 export BUILD_DATE=$(date +"%A, %B %d %Y %R %Z")
 export BUILD_DATE=$(date +"%B %d, %Y")
 export BUILT_VERSION="$fullver"
-$SCRIPT/banner/make-banner.sh ../public/status.png
+# $SCRIPT/banner/make-banner.sh ../public/status.png
 
 bash $SCRIPT/banner/make-svg-banner.sh ../public/status.svg
 
@@ -31,5 +31,3 @@ echo
 
 sleep 5
 wget -q -nv -O - https://github.com/devizer/h3control-bin/raw/master/public/h3control-install-daemon.sh | bash
-
-
