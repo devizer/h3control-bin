@@ -1,3 +1,6 @@
+#### UPDATE 33
+- The first build for Raspberry Pi 
+
 #### UPDATE 32 (1.32.821)
 - Fixed crashes for Armbian **mainline** kernel (4.*). 
 - Added HTTP_PORT env-parameter **for** single-line daemon **installer**. Default is 5000
