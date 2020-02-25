@@ -9,7 +9,7 @@ function say() {
   LightGreen='\033[1;32m';Yellow='\033[1;33m';RED='\033[0;31m'; NC='\033[0m'; printf "\n${LightGreen}$ver.$build Step $counter:${NC} ${Yellow}$message${NC}\n";
 }
 
-echo 1536000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+echo 1536000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq || true
 pushd `dirname $0` > /dev/null
 SCRIPT=`pwd`
 popd > /dev/null
